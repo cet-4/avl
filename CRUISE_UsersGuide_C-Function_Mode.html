@@ -1,0 +1,386 @@
+ <!-- saved EEE from url=(0014)about:internet -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Cache-control" content="public"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="C-Function Mode"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_User_Defined_Variables351.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Technical_Modules.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Function_(FU).html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_User_Defined_Variables351.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Description_of_Data_Bus352.html"/>
+<meta name="prodname" content="CRUISE"/><script type="text/javaScript">
+      
+   
+      var product = "CRUISE";
+      
+     
+      
+  </script>
+<meta name="version" content="23"/>
+<meta name="version" content="boost"/>
+<meta name="DC.Creator" content="AVL AST"/>
+<meta name="copyright" content="v2014 2013" type="primary"/>
+<meta name="DC.Rights.Owner" content="v2014 2013" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic"/>
+<meta http-equiv="X-UA-Compatibl" content="IE=8"/><link type="text/css" rel="stylesheet" href="../css/screen.css"/><link type="text/css" rel="stylesheet" href="../css/local/tree.css"/><link rel="stylesheet" type="text/css" href="../resources/commonltr.css"/>
+<title>C-Function Mode</title>
+<meta name='generationDateTime' content='24/Jan/2016 20:55:12'/>
+<meta name='generationSVN' content='Revision: 12348.'/>
+<script type="text/x-mathjax-config">
+
+      
+
+
+
+
+
+  MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['\\(','\\)']] },
+     MMLorHTML: { prefer: { Firefox: "MML" } },
+    extensions: ["tex2jax.js","toMathML.js"],
+    jax: ["input/TeX","output/SVG"],
+    imageFont: null
+});
+
+MathJax.Hub.Queue(
+    function () {
+            addonclickEventOnFormulas();  
+      
+    }
+  );
+
+if (MathJax.Hub.Browser.isMSIE){
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "HTML-CSS";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "HTML-CSS"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_HTMLorMML.js"] });
+}
+else
+{
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/SVG"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "SVG";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "SVG"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_SVG.js"] });
+}
+  MathJax.Hub.Queue(["Rerender", MathJax.Hub]);
+        MathJax.Hub.Register.StartupHook("MathMenu Ready",function () {
+           MathJax.Menu.menu.items[0].hidden = true;     // show math as
+           MathJax.Menu.menu.items[1].hidden = true;     // division line
+           MathJax.Menu.menu.items[3].hidden = true;     // Language
+           MathJax.Menu.menu.items[6].hidden = true;     // MathJax Help
+           MathJax.Menu.menu.items[2].menu.items[2].hidden = true;     // division line
+           MathJax.Menu.menu.items[2].menu.items[3].hidden = true;     // renderer
+           var s1=MathJax.Menu.menu.items[2];
+           var q1=s1.menu.Find("Scale All Math ...");
+           q1.hidden=true;
+ });
+// CVS_MathJax_pruned_js = "@(#) $Revision: 1.1 $ $ASTFile: d3ce96421e6aa4643dc226a17e0c247fd54756ae $"
+  
+
+           </script><script type="text/javaScript" src="../../../../resources/MathJax/MathJax.js">i=1;</script></head>
+<script type="text/javaScript">var index=0;var start = new Date().getTime();</script><body class="topic_body"><div id="version_id">documentation_storage/head</div><div class="searchForm" id="topic_tools"><div id="top_blue_border"><img class="print_button" src="../resources/print.png" alt="Print current topic" onclick="printTopic();"/><img class="print_button" src="../resources/star.png" alt="Bookmark page" onclick="bookmarkMe(document.location);" id="bookmark" style="display:none;"/></div></div><div id="splitterContainer"><div id="leftPane" style="display:none;"><div class="toc_container"><div id="container"><div id="containerTop"><div id="main"><div id="content"><form name="mainForm" action="javscript:;"><div class="newsItem"><div id="treeDiv1" style="display:none"><div style="display:none"> </div></div><div id="current_relative" style="display:none;">../</div></div></form></div></div></div></div></div></div><div id="rightPane"><div id="rightSplitterContainer"><div id="rightBottomPane"><div><div class="main_body"><div class="topicContent">
+
+<div id="next_previous_links"> </div><ul class="roles"><li><a id="beginner" target="_top">Beginner</a> </li><li><a id="intermediate" target="_top">Intermediate</a> </li><li><a id="expert" target="_top">Expert</a> </li></ul><h1 class="title topictitle1">C-Function Mode</h1>
+<div class="body"><p class="p">This mode is active if <strong class="ph b"> C-Function </strong> is selected for <strong class="ph b">Function Mode</strong> in the properties of the component.</p>
+<p class="p"/>
+<div class="p">
+<table cellpadding="1" cellspacing="0" summary="" class="table" pgwide="1" frame="border" border="1" rules="all"><tbody class="tbody"><tr class="row"><td class="entry" valign="top" style="width:32%"><p class="p"><strong class="ph b">Function String</strong></p>
+</td>
+<td class="entry" valign="top" style="width:53%"><div class="p">The code should be written as a part of a C-function.
+Following contents are allowed:<ul class="ul"><li class="li">Input Channels : a[0]-a[98]</li>
+<li class="li">Output Channels : y[0]-y[98]</li>
+<li class="li">Numerical constants : e.g. 1, 3.14, 0.05</li>
+<li class="li">Standard "C" numerical functions : sqrt,exp,log10,log,asin,acos,atan,sinh</li>
+<li class="li">Other standard "C" functions and key words: printf, if, else, while etc.</li>
+<li class="li">Operators : +,-,*,/,&amp;&amp;(AND),||(OR),!(NOT),%(module of),&gt;,&lt;,&gt;=,&lt;=</li>
+<li class="li">Brackets : (,),[,],{,}...</li>
+</ul>
+</div>
+<p class="p">Function header:</p>
+<div class="p"><pre class="pre codeblock block">double cFunctionXY(double a[], double y[]){</pre>
+ and function ending</div>
+<div class="p"><pre class="pre codeblock block">;return y;}</pre>
+</div>
+<p class="p">are automatically added.
+One simple example of a partial formula would be e.g.</p>
+<div class="p"><pre class="pre codeblock block">y[0] = sin(2*a[0])/pow(a[1],1.5) - 2.3</pre>
+</div>
+<p class="p">More info and more complex applications can be found in the  "C"
+language literature.</p>
+</td>
+<td class="entry" valign="top" style="width:13%"><p class="p">[-]</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:32%"><p class="p"><strong class="ph b">Numerical Constants</strong></p>
+</td>
+<td class="entry" valign="top" style="width:53%"><p class="p">Free user-defined, e.g. 1, 3.14, 0.05, ...</p>
+<p class="p">User-defined constants A, B, C, ... like in the RPN-mode can be defined in C code as variables.</p>
+<p class="p">Additionally, most of the ANSI C operators and statements can be used, e.g. the 'IF-THEN' -statement. </p>
+<p class="p">Up to 99 Data Bus output variables y[0], y[1], ..., y[98] can deliver  output values.</p>
+</td>
+<td class="entry" valign="top" style="width:13%"><p class="p">[-]</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:32%"><div class="p"><pre class="pre codeblock block"><strong class="ph b">double realTime;</strong></pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:53%"><p class="p">This variable is internally predefined and represents the simulation time and can be used inside the C function code. In contrast to the 'Real Time' databus output of component Cockpit, this variable is updated in every solver iteration step, instead of only once per solver time step.</p>
+</td>
+<td class="entry" valign="top" style="width:13%"> </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:32%"><p class="p"><strong class="ph b">C-Code Parser</strong></p>
+</td>
+<td class="entry" valign="top" style="width:53%"><p class="p">A separate validation check of the entered C-code can be performed.</p>
+</td>
+<td class="entry" valign="top" style="width:13%"> </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p class="p"><strong class="ph b">Available Special Functions</strong></p>
+<p class="p">In enhancement to the standard C functions CRUISE added a number of dedicated functions for applications in CRUISE allowing eg. the interaction with the CRUISE system.</p>
+<div class="p">
+<table cellpadding="1" cellspacing="0" summary="" class="table" pgwide="1" frame="border" border="1" rules="all"><tbody class="tbody"><tr class="row"><td class="entry" valign="top" style="width:37%"><div class="p"><strong class="ph b">Function</strong><pre class="pre codeblock block">int cfunTerminate();</pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:62%"><p class="p">This function can be used inside the C function code and supports a termination of the actual task calculation with storage of results. Calculation proceeds with next task.</p>
+<p class="p">Example:</p>
+<div class="p"><pre class="pre codeblock block">if (&lt;condition&gt;)
+    cfunTerminate();</pre>
+</div>
+<div class="p"><div class="note note"><div class="notetitle">Note:</div> This function was named "Terminate" in previous versions. The backward compatibility is kept, however to be compatible with future releases please use new function name.</div>
+</div>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:37%"><div class="p"><strong class="ph b">Function </strong><pre class="pre codeblock block">double cfunSetSolverStepsize(double newStep);</pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:62%"><p class="p">This function can be used inside the C function code to set a solver step for the next simulation step in the context of a simulation calculation. If no call is given or the step size is larger than step specified in task options, configured step size of the task is taken. In case of more calls in one time step, the smallest step size is taken. </p>
+<p class="p"><strong class="ph b">Warning</strong>: In changing the step size too often or if the change is too large, numerical effects may be triggered. </p>
+<p class="p">Example:</p>
+<div class="p"><pre class="pre codeblock block">if (finerStepNeeded)
+    cfunSetSolverStepsize(0.001);</pre>
+</div>
+<p class="p">If  "finerStepNeeded" is "true" the solver step is set to 0.001 s.</p>
+<div class="p"><div class="note note"><div class="notetitle">Note:</div> This function was named "SetSolverStepSize" in previous versions. The backward compatibility is kept, however to be compatible with future releases please use new function name.</div>
+</div>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:37%"><div class="p"><strong class="ph b">Function </strong><pre class="pre codeblock block">double cfunFilterWindowed(double xValue, int n, double buffer);</pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:62%"><p class="p">This function can be used inside the C function code to calculate a filtered window averaging of a value. </p>
+<p class="p"><em class="ph i">Remarks:</em></p>
+<p class="p">buffer has to be an array variable of declared size n+1.</p>
+<p class="p">It is recommended that the actualization frequency is set to low to perform the averaging over the time steps otherwise it may be averaged of the successive iteration calls for the time step.</p>
+<p class="p">Due to some restrictions of the function component, the first variable of the buffer has to be given in the call. Still all of the buffer is used and accessed internally for storage of the history.</p>
+<p class="p">Example:</p>
+<div class="p"><pre class="pre codeblock block">int n = 10;double buffer[11];
+y[0] = cfunFilterWindowed(a[0],n,buffer[0]);</pre>
+</div>
+<p class="p">for averaging an input value over 10 time steps.</p>
+<div class="p"><div class="note note"><div class="notetitle">Note:</div> This function was named "Filter_Windowed" in previous versions. The backward compatibility is kept, however to be compatible with future releases please use new function name.</div>
+</div>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:37%"><div class="p"><strong class="ph b">Function </strong><pre class="pre codeblock block">double cfunIntegrator(double dx, double x);</pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:62%"><p class="p">This function can be used inside the C function code to integrate a value. </p>
+<p class="p"><em class="ph i">Remarks:</em></p>
+<p class="p">This function must be called/submitted <strong class="ph b">only once</strong> at the beginning of simulation. Then the operation of the integration is performed by CRUISE during calculation.</p>
+<p class="p">Example:</p>
+<div class="p"><pre class="pre codeblock block">double dx = a[0]; double x;
+if (&lt;initialization condition&gt;) {
+    x = 0.0;
+    cfunIntegrator(dx, x);
+}
+y[0] = x;</pre>
+</div>
+<p class="p">for calculating the integral value of the input a[0].</p>
+<p class="p">In order to reset the integral value during simulation, the value x (as in the example) can be overwritten with zero value.</p>
+<div class="p"><pre class="pre codeblock block">if (&lt;reset condition&gt;)
+    x = 0.0;</pre>
+</div>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:37%"><div class="p"><strong class="ph b">Function </strong><pre class="pre codeblock block">double cfunDerivative(double t, double x, double dx0);</pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:62%"><p class="p">This function can be used inside the C function code to calculate the derivative of a value. Intended usage: derivative with respect to time, though it is possible to use other signal instead of time. The derivation is done with finite differences at the beginning of the time step, the value is then not updated during the time step, even if the function is called more often. If the difference of the time input is zero, the value of the previous step is used. For the first time step the value dx0 is taken.</p>
+<pre class="pre codeblock">double x = a[0];
+y[0] = cfunDerivative(realTime, x,1.0);</pre>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:37%"><div class="p"><strong class="ph b">Function </strong><pre class="pre codeblock block">int cfunResetState();</pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:62%"><p class="p">This function can be used inside the C function code to give a signal to the CRUISE system to reset the mechanical and electric system to initial condition. </p>
+<pre class="pre codeblock block">if (&lt;condition&gt;)
+    cfunResetState();</pre>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:37%"><div class="p"><strong class="ph b">Function </strong><pre class="pre codeblock block">int cfunGetSystemState();</pre>
+</div>
+</td>
+<td class="entry" valign="top" style="width:62%"><p class="p">During a time integration step, the CRUISE system has different state, eg. pre time step at the beginning of the time step. This function can be used inside the C function code to fetch the state:</p>
+<div class="p"><ul class="ul"><li class="li">0 == initialize</li>
+<li class="li">1 == pre time step</li>
+<li class="li">2 == time step iteration</li>
+<li class="li">10 == call during a stationary task or stationary pre calculation.</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="related-links"><div id="prev_next_links">
+<ul class="familylinks">
+<li class="li_parent"><div class="parentlink"><div class="upHolder_link"/> <a class="link" href="../topics/CRUISE_UsersGuide_User_Defined_Variables351.html">User Defined Variables</a></div>
+</li><li class="li_next"><div class="nextlink"> <a class="link" href="../topics/CRUISE_UsersGuide_Description_of_Data_Bus352.html">Description of Data Bus</a></div>
+</li></ul>
+</div></div>
+</div></div></div></div></div></div></div><div id="tooltip_message"/><script type="text/javaScript" src="../search/nwSearchFnt.js">i=1;</script><script type="text/javaScript" src="../resources/key.js">i=1;</script></body><script type="text/javaScript" src="../resources/javascript.js">i=1;</script><script type="text/javascript" src="../resources/location.js">i=11;</script><script type="text/javascript" src="../resources/prod.js">i=11;</script><script type="text/javascript" src="../resources/jquery.js">i=11;</script><link type="image/vnd.microsoft.icon" href="../resources/avl.ico" rel="shortcut icon"/><script type="text/javaScript" src="../search/addition.js">i=1;</script><script type="text/javaScript" src="../resources/yahoo.js">i=1;</script><script type="text/javaScript" src="../resources/event.js">i=1;</script><script type="text/javaScript" src="../resources/toctree.js">i=1;</script><script type="text/javaScript">
+ hesh = String(window.location).split('#').pop();
+
+
+
+        
+if(window.top === window.self) {
+    //hesh = String(window.location).split('#').pop()
+   
+     window.location.replace("../index.html#"+window.location.pathname.split('/').pop()+'#'+hesh);
+}
+
+
+ var header_hidden = getCookie("is_AST_docu_header_hidden");
+  /*alert(header_hidden);
+ if (header_hidden == "true")
+    {
+        hideHeader()
+    }
+    
+    
+     $(function() {
+        $("#treeDiv1").load("toc.html", function() {
+        var hash = location.hash.slice(1);
+        var focus_id;
+        if(hash == '' )
+        {
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop()+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop() == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1]
+            }
+            });
+        }
+        if(hash.substr(0,7)!='toc_id_')
+        {   
+            //alert(hash+' '+hash.substr(0,7));
+            focus_id = '#'+hash;
+            $('#'+hash).attr('class','marked');
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop().split('#')[0]+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop().split('#')[0] == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1];
+                    
+            }
+            });
+        }
+        else
+        {
+            focus_id = '#'+hash+'_child';
+        }
+        $('#'+hash+'_child').attr("class","active toc_link");
+       
+        $('#toc_top_list_holder').children('li').each(function(i) { 
+             $(this).children('ul').each(function(i) { 
+            $(this).attr('class','');
+        });
+        }); 
+        var parents = Array()
+        getParents(hash, parents);
+        breadcrumb(parents);
+        next_prev_link(hash);
+        $('.topictitle1').text($('.active').text());
+
+       var end = new Date().getTime();
+      var time = end - start;
+function_alert('Execution time: ' + time);
+
+        $(focus_id).focus()
+
+});
+        
+    });*/
+    
+    topic_page_update(product);
+     
+if(navigator.appName.indexOf("Internet Explorer")!=-1){
+        if(hesh != 'first_topic')
+        window.top.location.hash = '---'+window.location.pathname;
+   }
+   else
+   {
+    $('#bookmark').show();
+   }
+    
+
+        
+    
+    
+     var otherWindow = window.parent.frames[0];
+     otherWindow.postMessage("CRUISE_UsersGuide_C-Function_Mode.xml", "*");
+     if (window.addEventListener) {
+      window.addEventListener("message", function(event) {               
+               $('body').html(event.data);
+            }, false);}
+            else
+            {
+                window.attachEvent('onmessage', function(event) {               
+               $('body').html(event.data);
+            });
+               // alert('Not supported try FireFox');
+            }
+     
+     </script>
+</html>

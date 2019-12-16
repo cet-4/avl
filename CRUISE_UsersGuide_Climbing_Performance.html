@@ -1,0 +1,398 @@
+ <!-- saved EEE from url=(0014)about:internet -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Cache-control" content="public"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Climbing Performance"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Computational_Tasks.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Application_of_the_Program.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Computational_Tasks.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Constant_Drive.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Full_Load_Acceleration.html"/>
+<meta name="prodname" content="CRUISE"/><script type="text/javaScript">
+      
+   
+      var product = "CRUISE";
+      
+     
+      
+  </script>
+<meta name="version" content="23"/>
+<meta name="version" content="boost"/>
+<meta name="DC.Creator" content="AVL AST"/>
+<meta name="copyright" content="v2014 2013" type="primary"/>
+<meta name="DC.Rights.Owner" content="v2014 2013" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic"/>
+<meta http-equiv="X-UA-Compatibl" content="IE=8"/><link type="text/css" rel="stylesheet" href="../css/screen.css"/><link type="text/css" rel="stylesheet" href="../css/local/tree.css"/><link rel="stylesheet" type="text/css" href="../resources/commonltr.css"/>
+<title>Climbing Performance</title>
+<meta name='generationDateTime' content='24/Jan/2016 20:55:12'/>
+<meta name='generationSVN' content='Revision: 12348.'/>
+<script type="text/x-mathjax-config">
+
+      
+
+
+
+
+
+  MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['\\(','\\)']] },
+     MMLorHTML: { prefer: { Firefox: "MML" } },
+    extensions: ["tex2jax.js","toMathML.js"],
+    jax: ["input/TeX","output/SVG"],
+    imageFont: null
+});
+
+MathJax.Hub.Queue(
+    function () {
+            addonclickEventOnFormulas();  
+      
+    }
+  );
+
+if (MathJax.Hub.Browser.isMSIE){
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "HTML-CSS";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "HTML-CSS"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_HTMLorMML.js"] });
+}
+else
+{
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/SVG"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "SVG";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "SVG"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_SVG.js"] });
+}
+  MathJax.Hub.Queue(["Rerender", MathJax.Hub]);
+        MathJax.Hub.Register.StartupHook("MathMenu Ready",function () {
+           MathJax.Menu.menu.items[0].hidden = true;     // show math as
+           MathJax.Menu.menu.items[1].hidden = true;     // division line
+           MathJax.Menu.menu.items[3].hidden = true;     // Language
+           MathJax.Menu.menu.items[6].hidden = true;     // MathJax Help
+           MathJax.Menu.menu.items[2].menu.items[2].hidden = true;     // division line
+           MathJax.Menu.menu.items[2].menu.items[3].hidden = true;     // renderer
+           var s1=MathJax.Menu.menu.items[2];
+           var q1=s1.menu.Find("Scale All Math ...");
+           q1.hidden=true;
+ });
+// CVS_MathJax_pruned_js = "@(#) $Revision: 1.1 $ $ASTFile: d3ce96421e6aa4643dc226a17e0c247fd54756ae $"
+  
+
+           </script><script type="text/javaScript" src="../../../../resources/MathJax/MathJax.js">i=1;</script></head>
+<script type="text/javaScript">var index=0;var start = new Date().getTime();</script><body class="topic_body"><div id="version_id">documentation_storage/head</div><div class="searchForm" id="topic_tools"><div id="top_blue_border"><img class="print_button" src="../resources/print.png" alt="Print current topic" onclick="printTopic();"/><img class="print_button" src="../resources/star.png" alt="Bookmark page" onclick="bookmarkMe(document.location);" id="bookmark" style="display:none;"/></div></div><div id="splitterContainer"><div id="leftPane" style="display:none;"><div class="toc_container"><div id="container"><div id="containerTop"><div id="main"><div id="content"><form name="mainForm" action="javscript:;"><div class="newsItem"><div id="treeDiv1" style="display:none"><div style="display:none"> </div></div><div id="current_relative" style="display:none;">../</div></div></form></div></div></div></div></div></div><div id="rightPane"><div id="rightSplitterContainer"><div id="rightBottomPane"><div><div class="main_body"><div class="topicContent">
+
+<div id="next_previous_links"> </div><ul class="roles"><li><a id="beginner" target="_top">Beginner</a> </li><li><a id="intermediate" target="_top">Intermediate</a> </li><li><a id="expert" target="_top">Expert</a> </li></ul><h1 class="title topictitle1">Climbing Performance</h1>
+<div class="body"><p class="p"> The Climbing Performance Task includes two calculation possibilities: </p>
+<ul class="ul"><li class="li">Maximum ascending gradients that can be surmounted will be subjected to a stationary computation for all possible velocities.</li>
+<li class="li">Maximum ascending gradients at which a starting is still possible with a desired starting acceleration will be acquired for each gear step.</li>
+</ul>
+<div class="fig fignone fig" id="image_title_id_Climbing_Performance_Task_Screenshot_png"><a name="image_title_id_Climbing_Performance_Task_Screenshot_png"><!-- --></a><div class="imagecenter _fig"><img class="image imagecenter" src="../media/Climbing_Performance_Task_Screenshot.png" height="415" width="680"/></div><span class="figcap">Figure 1. Climbing Performance Window</span></div>
+<p class="p">The climbing performance depends on:</p>
+<ul class="ul"><li class="li">Velocity Measuring Points (optional)</li>
+<li class="li">Course</li>
+<li class="li">Driver</li>
+</ul>
+<p class="p">The reference axis is the vehicle velocity.</p>
+<div class="p">
+<table cellpadding="1" cellspacing="0" summary="" class="table" pgwide="1" frame="border" border="1" rules="all"><tbody class="tbody"><tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Climbing Performance</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p"><strong class="ph b">Run</strong></p>
+<p class="p">Part task is calculated.</p>
+<p class="p"><strong class="ph b">Do not run</strong></p>
+<p class="p">Part task is not calculated.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Output of Text Report</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">By default, the output of template based text outputs is activated. To save calculation time, it can be suppressed.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Output of MS-Exports</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">This is deactivated by default. When activated, the MS-Exports components write their Data Bus input data into an excel file. The output has to be activated also in every MS-Exports component.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Hot Start - steady state</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">The temperature models of the engine, respectively the exhaust gas system is deactivated.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Cold Start</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">The temperature models of the engine, respectively the exhaust gas system is deactivated.  The ambient temperature is used as the start temperature of the engine and the exhaust system.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Driving Resistance</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">One of five vehicle resistance models should be determined for calculation. The same model should also be activated in the Vehicle's properties window.</p>
+<p class="p"><strong class="ph b">Physical</strong></p>
+<p class="p">The driving resistance is defined by the physical values (drag coefficient, rolling resistance).</p>
+<p class="p"><strong class="ph b">Function with Reference Vehicle</strong></p>
+<p class="p">The driving resistance is defined by three parameters. The defined values are converted from the reference vehicle to the actual one.</p>
+<p class="p"><strong class="ph b">Characteristic with Reference Vehicle</strong></p>
+<p class="p">The driving resistance is defined in a characteristic as function of the vehicle velocity. The defined values are converted from the reference vehicle to the actual one.</p>
+<p class="p"><strong class="ph b">Function without Reference Vehicle</strong></p>
+<p class="p">The driving resistance is defined by three parameters. The defined values are used without a reference vehicle.</p>
+<p class="p"><strong class="ph b">Characteristic without Reference Vehicle</strong></p>
+<p class="p">The driving resistance is defined in a characteristic as function of the vehicle velocity. The defined values are used without a reference vehicle.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Stationary S / Stationary 1 / Stationary 2</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">The user can select which solver is used for this task. For special drive train configurations only stationary S is possible. For general drive train configurations the user can select between two solvers (stationary 1 and stationary 2). Stationary 2 should be activated first in the settings window.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Starting from Rest with Start Acceleration</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">When activated, it is possible to calculate the take off ascending gradient at a defined take-off acceleration for the first gear in addition to the maximum ascending gradient that can be surmounted at each engine speed.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Partial Load with Load Position</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">When activated, the maximum load position for the task can be defined.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Shifting</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p"><strong class="ph b">According to Velocity</strong></p>
+<p class="p">The gear box control, respectively the driver adjusts the gears according to the vehicle velocity.</p>
+<p class="p"><strong class="ph b">According to Speed</strong></p>
+<p class="p">The gear box control, respectively the driver adjusts the gears according to the engine speed.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Tiptronic</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">With automatic transmission, the gears are controlled by the gear box control, respectively the gear box program.  Since the individual gears cannot be controlled directly, there is only one result line for each driving level. Tiptronic is used to investigate each of the gear steps.  When activated, the driver is in control and can shift the individual gears.  This is insignificant with a manual transmission.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Kickdown</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">When activated the gears will be shifted according to the Kickdown Characteristic which can be defined in the Gear Box Program.  Kickdown means that the load signal is 100%.  This is insignificant with a manual transmission.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Shift gears</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p"><strong class="ph b">Gear Box Control</strong></p>
+<p class="p">For automatic cockpits it can be determined that the gear box control controls the gear shifting process.</p>
+<p class="p"><strong class="ph b">Gear Shifting Program</strong></p>
+<p class="p">For automatic cockpits it can be determined that the gear box program controls the gear shifting process.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Without slip</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">Slip of the wheel is not considered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Without slip - limited</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">Slip of the wheel is not allowed.  The maximum longitudinal force is limited with the friction coefficients of the road and the tire.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">With slip</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">Slip of the wheel is considered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Measuring points</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p"><strong class="ph b">Velocity active</strong></p>
+<p class="p">The velocity measuring points are activated.</p>
+<p class="p"><strong class="ph b">Inclination at Speed</strong></p>
+<p class="p">To obtain the ascending gradient for all speeds for special engine speeds, press the <strong class="ph b">ascending</strong> button and enter the desired engine speeds.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Driver and Course</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">The driver file and the course file can be loaded form the general directory.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><strong class="ph b">Load State</strong></td>
+<td class="entry" valign="top" style="width:74%"><p class="p">The calculation can be run with the following load states:</p>
+<p class="p"><strong class="ph b">Empty</strong>:  the weight of the vehicle equals the Curb weight</p>
+<p class="p"><strong class="ph b">Half</strong>: the weight of the vehicle equals the middle of the Curb and the Gross weight</p>
+<p class="p"><strong class="ph b">Full</strong>: the weight of the vehicle equals the Gross weight</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Vehicle</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">More than one load can be selected.  In this case, the calculation will be done once for every load state.</p>
+<p class="p">An additional mass for the load state empty can be defined so that the calculation can be run with every different weight of the vehicle.</p>
+<p class="p"><strong class="ph b">Constant Additional Load (Abs)</strong></p>
+<p class="p">A constant load has to be defined which is added to the load of the empty vehicle.</p>
+<p class="p"><strong class="ph b">Constant Additional Load (Rel)</strong></p>
+<p class="p">A percentage of (Gross weight - Curb weight) has to be defined which is added to the load of the empty vehicle.</p>
+<p class="p"><strong class="ph b">Constant Number of Passengers (Abs)</strong></p>
+<p class="p">A number of passengers and average passenger weight have to be defined. Overall passenger weight is then added to the load of the empty vehicle.</p>
+<p class="p"><strong class="ph b">Constant Additional Volume (Abs)</strong></p>
+<p class="p">A volume of the cargo and its density have to be defined. Overall cargo weight is than added to the load of the empty vehicle.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Trailer</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">More than one load can be selected.  In this case, the calculation will be done once for every load state.</p>
+<p class="p">An additional mass for the load state empty can be defined so that the calculation can be run with every different weight of the trailer.</p>
+<p class="p"><strong class="ph b">Constant Additional Load (Abs)</strong></p>
+<p class="p">A constant load has to be defined which is added to the load of the empty trailer.</p>
+<p class="p"><strong class="ph b">Constant Additional Load (Rel)</strong></p>
+<p class="p">A percentage of (Gross weight - Curb weight) has to be defined which is added to the load of the empty trailer.</p>
+<p class="p"><strong class="ph b">Constant Additional Volume (Abs)</strong></p>
+<p class="p">A volume of the cargo and its density have to be defined. Overall cargo weight is than added to the load of the empty trailer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:25%"><p class="p"><strong class="ph b">Virtual Trailer</strong></p>
+</td>
+<td class="entry" valign="top" style="width:74%"><p class="p">The task can also be calculated with a 'virtual trailer'.  There is an additional pulling force which acts in parallel to the surface of the roadway.  With the virtual trailer the effects of a trailer on the climbing performance can be calculated without modeling it in the Vehicle Modeler. </p>
+<p class="p"><strong class="ph b">Caution!</strong> The setup of the virtual trailer is independent from the fact that a trailer is modeled in the Vehicle Modeler.  In extreme cases, two trailers can be considered.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="related-links"><div id="prev_next_links">
+<ul class="familylinks">
+<li class="li_prev"><div class="previouslink"> <a class="link" href="../topics/CRUISE_UsersGuide_Constant_Drive.html">Constant Drive</a></div>
+</li><li class="li_parent"><div class="parentlink"><div class="upHolder_link"/> <a class="link" href="../topics/CRUISE_UsersGuide_Computational_Tasks.html">Computational Tasks</a></div>
+</li><li class="li_next"><div class="nextlink"> <a class="link" href="../topics/CRUISE_UsersGuide_Full_Load_Acceleration.html">Full Load Acceleration</a></div>
+</li></ul>
+</div></div>
+</div></div></div></div></div></div></div><div id="tooltip_message"/><script type="text/javaScript" src="../search/nwSearchFnt.js">i=1;</script><script type="text/javaScript" src="../resources/key.js">i=1;</script></body><script type="text/javaScript" src="../resources/javascript.js">i=1;</script><script type="text/javascript" src="../resources/location.js">i=11;</script><script type="text/javascript" src="../resources/prod.js">i=11;</script><script type="text/javascript" src="../resources/jquery.js">i=11;</script><link type="image/vnd.microsoft.icon" href="../resources/avl.ico" rel="shortcut icon"/><script type="text/javaScript" src="../search/addition.js">i=1;</script><script type="text/javaScript" src="../resources/yahoo.js">i=1;</script><script type="text/javaScript" src="../resources/event.js">i=1;</script><script type="text/javaScript" src="../resources/toctree.js">i=1;</script><script type="text/javaScript">
+ hesh = String(window.location).split('#').pop();
+
+
+
+        
+if(window.top === window.self) {
+    //hesh = String(window.location).split('#').pop()
+   
+     window.location.replace("../index.html#"+window.location.pathname.split('/').pop()+'#'+hesh);
+}
+
+
+ var header_hidden = getCookie("is_AST_docu_header_hidden");
+  /*alert(header_hidden);
+ if (header_hidden == "true")
+    {
+        hideHeader()
+    }
+    
+    
+     $(function() {
+        $("#treeDiv1").load("toc.html", function() {
+        var hash = location.hash.slice(1);
+        var focus_id;
+        if(hash == '' )
+        {
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop()+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop() == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1]
+            }
+            });
+        }
+        if(hash.substr(0,7)!='toc_id_')
+        {   
+            //alert(hash+' '+hash.substr(0,7));
+            focus_id = '#'+hash;
+            $('#'+hash).attr('class','marked');
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop().split('#')[0]+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop().split('#')[0] == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1];
+                    
+            }
+            });
+        }
+        else
+        {
+            focus_id = '#'+hash+'_child';
+        }
+        $('#'+hash+'_child').attr("class","active toc_link");
+       
+        $('#toc_top_list_holder').children('li').each(function(i) { 
+             $(this).children('ul').each(function(i) { 
+            $(this).attr('class','');
+        });
+        }); 
+        var parents = Array()
+        getParents(hash, parents);
+        breadcrumb(parents);
+        next_prev_link(hash);
+        $('.topictitle1').text($('.active').text());
+
+       var end = new Date().getTime();
+      var time = end - start;
+function_alert('Execution time: ' + time);
+
+        $(focus_id).focus()
+
+});
+        
+    });*/
+    
+    topic_page_update(product);
+     
+if(navigator.appName.indexOf("Internet Explorer")!=-1){
+        if(hesh != 'first_topic')
+        window.top.location.hash = '---'+window.location.pathname;
+   }
+   else
+   {
+    $('#bookmark').show();
+   }
+    
+
+        
+    
+    
+     var otherWindow = window.parent.frames[0];
+     otherWindow.postMessage("CRUISE_UsersGuide_Climbing_Performance.xml", "*");
+     if (window.addEventListener) {
+      window.addEventListener("message", function(event) {               
+               $('body').html(event.data);
+            }, false);}
+            else
+            {
+                window.attachEvent('onmessage', function(event) {               
+               $('body').html(event.data);
+            });
+               // alert('Not supported try FireFox');
+            }
+     
+     </script>
+</html>

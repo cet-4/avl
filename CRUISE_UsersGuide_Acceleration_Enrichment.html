@@ -1,0 +1,59 @@
+<html lang="en-us" lang="en-us" xml:lang="en-us"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="resources/commonltr.css" rel="stylesheet" type="text/css">	
+<script src="resources/jquery.js" type="text/javaScript">i=1;</script>
+<link href="resources/CRUISE.png" rel="shortcut icon" type="image/x-icon">
+<title>CRUISE Users Guide</title><script language="javascript"> 
+
+
+var firstTopic = 'CRUISE_UsersGuide_Introduction.html#first_topic';function LoadPage(){ 
+       var hesh = String(window.location).split('#').pop();
+       if(window.location.hash.indexOf('topics/') !== -1)
+       {
+        $('#content_page_id').attr('src','topics/'+window.location.hash.split('topics/')[1]);
+       
+       }
+       else if(window.location.hash.indexOf('#') !== -1)
+       {
+        var id_in_topic = String(window.location).split('#')[2];        
+        var topic_linked = String(window.location).split('#')[1];
+        $('#content_page_id').attr('src','topics/'+topic_linked+'#'+id_in_topic);
+       
+       }
+       else if(hesh.indexOf('---') !== -1) {   
+    
+        $('#content_page_id').attr('src','topics/'+hesh.split('topics/')[1]);
+        }
+        else
+        {
+            $('#content_page_id').attr('src','topics/'+firstTopic);
+        }
+        }
+</script></head>
+
+
+
+
+<frameset rows="136px,*" onload="LoadPage()">
+<frame name="top" src="resources/header.html">
+<frameset cols="25%,75%" onload="LoadPage()">
+<frame name="left" src="topics/toc.html">
+<frame name="content_page" id="content_page_id" src="topics/CRUISE_UsersGuide_Acceleration_Enrichment.html">
+</frameset>
+    
+  
+  
+  
+  
+</frameset> 
+
+
+  
+
+
+
+
+
+
+  
+</html>

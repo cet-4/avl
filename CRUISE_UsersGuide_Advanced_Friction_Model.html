@@ -1,0 +1,350 @@
+ <!-- saved EEE from url=(0014)about:internet -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Cache-control" content="public"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Advanced Friction Model"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Consumption_Models.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Technical_Modules.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Combustion_Engine_(E).html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Consumption_Models.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Increase_by_Mean_Pressure_Factor.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Fuel_Consumption.html"/>
+<meta name="prodname" content="CRUISE"/><script type="text/javaScript">
+      
+   
+      var product = "CRUISE";
+      
+     
+      
+  </script>
+<meta name="version" content="23"/>
+<meta name="version" content="boost"/>
+<meta name="DC.Creator" content="AVL AST"/>
+<meta name="copyright" content="v2014 2013" type="primary"/>
+<meta name="DC.Rights.Owner" content="v2014 2013" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic"/>
+<meta http-equiv="X-UA-Compatibl" content="IE=8"/><link type="text/css" rel="stylesheet" href="../css/screen.css"/><link type="text/css" rel="stylesheet" href="../css/local/tree.css"/><link rel="stylesheet" type="text/css" href="../resources/commonltr.css"/>
+<title>Advanced Friction Model</title>
+<meta name='generationDateTime' content='24/Jan/2016 20:55:12'/>
+<meta name='generationSVN' content='Revision: 12348.'/>
+<script type="text/x-mathjax-config">
+
+      
+
+
+
+
+
+  MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['\\(','\\)']] },
+     MMLorHTML: { prefer: { Firefox: "MML" } },
+    extensions: ["tex2jax.js","toMathML.js"],
+    jax: ["input/TeX","output/SVG"],
+    imageFont: null
+});
+
+MathJax.Hub.Queue(
+    function () {
+            addonclickEventOnFormulas();  
+      
+    }
+  );
+
+if (MathJax.Hub.Browser.isMSIE){
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "HTML-CSS";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "HTML-CSS"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_HTMLorMML.js"] });
+}
+else
+{
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/SVG"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "SVG";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "SVG"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_SVG.js"] });
+}
+  MathJax.Hub.Queue(["Rerender", MathJax.Hub]);
+        MathJax.Hub.Register.StartupHook("MathMenu Ready",function () {
+           MathJax.Menu.menu.items[0].hidden = true;     // show math as
+           MathJax.Menu.menu.items[1].hidden = true;     // division line
+           MathJax.Menu.menu.items[3].hidden = true;     // Language
+           MathJax.Menu.menu.items[6].hidden = true;     // MathJax Help
+           MathJax.Menu.menu.items[2].menu.items[2].hidden = true;     // division line
+           MathJax.Menu.menu.items[2].menu.items[3].hidden = true;     // renderer
+           var s1=MathJax.Menu.menu.items[2];
+           var q1=s1.menu.Find("Scale All Math ...");
+           q1.hidden=true;
+ });
+// CVS_MathJax_pruned_js = "@(#) $Revision: 1.1 $ $ASTFile: d3ce96421e6aa4643dc226a17e0c247fd54756ae $"
+  
+
+           </script><script type="text/javaScript" src="../../../../resources/MathJax/MathJax.js">i=1;</script></head>
+<script type="text/javaScript">var index=0;var start = new Date().getTime();</script><body class="topic_body"><div id="version_id">documentation_storage/head</div><div class="searchForm" id="topic_tools"><div id="top_blue_border"><img class="print_button" src="../resources/print.png" alt="Print current topic" onclick="printTopic();"/><img class="print_button" src="../resources/star.png" alt="Bookmark page" onclick="bookmarkMe(document.location);" id="bookmark" style="display:none;"/></div></div><div id="splitterContainer"><div id="leftPane" style="display:none;"><div class="toc_container"><div id="container"><div id="containerTop"><div id="main"><div id="content"><form name="mainForm" action="javscript:;"><div class="newsItem"><div id="treeDiv1" style="display:none"><div style="display:none"> </div></div><div id="current_relative" style="display:none;">../</div></div></form></div></div></div></div></div></div><div id="rightPane"><div id="rightSplitterContainer"><div id="rightBottomPane"><div><div class="main_body"><div class="topicContent">
+
+<div id="next_previous_links"> </div><ul class="roles"><li><a id="beginner" target="_top">Beginner</a> </li><li><a id="intermediate" target="_top">Intermediate</a> </li><li><a id="expert" target="_top">Expert</a> </li></ul><h1 class="title topictitle1">Advanced Friction Model</h1>
+<div class="body"><p class="p"><strong class="ph b"> I. Introduction </strong></p>
+<p class="p">The principal factors influencing a vehicle's fuel consumption can be determined on the basis of this definition of consumption per distance. They can be categorized as:</p>
+<div class="p"><ol class="ol"><li class="li">Contribution factors related to motor (Engine Losses),</li>
+<li class="li">Drive Train Losses, and</li>
+<li class="li">Exterior resistance</li>
+</ol>
+</div>
+<p class="p">There is continuing interest in a better understanding the friction losses in I.C engines. These adversely affect the maximum work output and fuel economy characteristics of an engine, directly account for much of the difference in fuel consumption between cold and full-warm engine operation. The engine losses may be grouped as follows: </p>
+<div class="p"><ol class="ol"><li class="li">Mechanical friction,</li>
+<li class="li">Pumping losses,</li>
+<li class="li">Exhaust losses, and</li>
+<li class="li">Heat transferred to the environment, convection in the coolant circuit and radiation in engine compartment</li>
+</ol>
+</div>
+<p class="p">An accurate friction model must account for engine design variables such as bore, stroke, and number of valves and must consider engine-operating conditions such as speed, load and oil temperature. The friction model must also accurately distribute the friction within the engine, and for this application, be based on general scalable engine parameters. </p>
+<p class="p">The friction model, which best satisfies these criteria is the one developed by Patton, Nitschke and Heywood <a class="xref" href="#Patton">[1],</a> PNH. The treatment of the power losses using PNH model is for fully warmed-up engine running conditions. </p>
+<p class="p">The model brake-down the friction losses into component parts associated with the main bearings, the valve train, piston group and auxiliary components. Each friction component is used to define and locate appropriate heat sources for the frictional heating of the lubricating oil flow.</p>
+<p class="p"><strong class="ph b">II. ENGINE LOSSES: PNH Model</strong></p>
+<p class="p"><strong class="ph b">A. Mechanical Friction</strong></p>
+<p class="p"><strong class="ph b">1. Crankshaft</strong></p>
+<p class="p">The crankshaft means effective pressure can be expressed as follows:</p>
+<p class="p"><div class="imagecenter formula_fig"><span class="formula_span">\[ fmep=c_{cb} \left( {\cfrac{N{\, }D_{b}^{3} {\, }L_{b} {\,  }n_{b} }{B^{2}{\, }S{\, }n_{c} }} \right)+c_{cs} \left(  {\cfrac{D_{b} }{B^{2}{\, }S{\, }n_{c} }} \right)+c_{td} \left(  {\cfrac{N^{2}{\, }D_{b}^{2} {\, }n_{b} }{n_{c} }} \right) \] </span></div></p>
+<p class="p">where:</p>
+<p class="p">B         Bore   [m]</p>
+<p class="p">S         Stroke   [m]</p>
+<p class="p">D<sub class="ph sub">b</sub>        bearing diameter    [m]</p>
+<p class="p">L<sub class="ph sub">b</sub>        bearing length   [m]</p>
+<p class="p">n<sub class="ph sub">b</sub>        no. of bearings   [-]</p>
+<p class="p">n<sub class="ph sub">c</sub>        no. of cylinders   [-]</p>
+<p class="p">N         Engine rotational Speed   [rpm]</p>
+<p class="p">C<sub class="ph sub">cb</sub>       Coefficient of the hydrodynamic losses in main bearings   [Pa/rpm m]</p>
+<p class="p">C<sub class="ph sub">cs</sub>       Coefficient of friction losses in main bearing seals   [Pa m<sup class="ph sup">2</sup>]</p>
+<p class="p">C<sub class="ph sub">td</sub>       Coefficient of friction losses due to viscous dissipation   [Pa s<sup class="ph sup">2</sup>/m<sup class="ph sup">2</sup> rpm]</p>
+<p class="p"><strong class="ph b">2. Piston (Reciprocating) Group</strong></p>
+<p class="p">The friction means effective pressure in the reciprocating group may be calculated the following equation</p>
+<p class="p"><div class="imagecenter formula_fig"><span class="formula_span">\[ mep_{pb} =c_{pb} \left( {\cfrac{N{\, }D_{b}^{3} {\, }L_{b} {\,  }n_{b} }{B^{2}{\, }S{\, }n_{c} }} \right)+c_{ps} \left(  {\cfrac{V_{p} }{B}} \right)+c_{pr} \left( {1+\cfrac{10^{3}}{N}}  \right)\left( {\cfrac{1}{B^{2}}} \right) \] </span></div></p>
+<p class="p"><div class="imagecenter formula_fig"><span class="formula_span">\[ C_{o} x\cfrac{P_{i} }{P_{a} }\left( {0.088{\, r}_{{c}} {\,  }+{\, 0.182\, r}_{{c}}^{{(1.33-2.38 \cdot 10}^{{-2}}V_{p} )} }  \right) \] </span></div></p>
+<p class="p">where:</p>
+<p class="p">C<sub class="ph sub">cb</sub>          Coefficient for connecting rod bearing hydrodynamics   [Pa/rpm m]</p>
+<p class="p">C<sub class="ph sub">ps</sub>          Coefficient for skirt-cylinder wall hydrodynamics   [Pa s]</p>
+<p class="p">C<sub class="ph sub">pr</sub>           Coefficient for piston ring-cylinder wall   [Pa m<sup class="ph sup">2</sup>]</p>
+<p class="p">C<sub class="ph sub">o</sub>            Coefficient for gas pressure to ring friction   [Pa]</p>
+<p class="p">V<sub class="ph sub">p</sub>            Mean piston speed   [m/s]</p>
+<p class="p"><strong class="ph b">3. Valve Train</strong></p>
+<p class="p">The friction means effective pressure in the valve train is calculated using the following equation</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_536"><a name="formula_CRUISE_UsersGuide_536"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{cv} =c_{vb} \left( {\cfrac{N{\, \, }n_{b} }{B^{2}{\,  }S{\, }n_{c} }} \right)+c_{vo} +c_{vh} \left( {\cfrac{L_{v}^{1.5}  {\, }N^{{0.5}}{\, }n_{v} {\, }}{B{\, }S{\,  }n_{c} }} \right)+c_{vn} \left( {1+\cfrac{10^{3}}{N}} \right)\cfrac{L_{v}  {\, }n_{v} }{S{\, }n_{c} }+Fmep_{cam{\, }follower}  \] </span></div><span class="formulacap">(1)</span></div>
+<p class="p">Flat Cam Follower</p>
+<p class="p"><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{cam{\, }follower} =c_{vf} \left( {1+\cfrac{10^{3}}{N}}  \right)\cfrac{{\, }n_{v} }{S{\, }n_{c} } \] </span></div></p>
+<p class="p">Roller Cam Follower</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_538"><a name="formula_CRUISE_UsersGuide_538"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{cam{\, }follower} =c_{vr} \left( {\dfrac{N{\, }n_{v}  }{S{\, }n_{c} }} \right) \] </span></div><span class="formulacap">(2)</span></div>
+<p class="p">where:</p>
+<p class="p">C<sub class="ph sub">vb</sub>            Coefficient for camshaft bearing hydrodynamic   [Pa m<sup class="ph sup">3</sup>/rpm]</p>
+<p class="p">C<sub class="ph sub">vh</sub>            Oscillating hydrodynamic lubrication constant   [Pa m<sup class="ph sup">0.5</sup>/rpm<sup class="ph sup">0.5</sup>]</p>
+<p class="p">C<sub class="ph sub">vm</sub>           Oscillating mixed lubrication constant   [Pa]</p>
+<p class="p">C<sub class="ph sub">vo</sub>            Boundary lubrication constant due to the camshaft bearing seals   [Pa]</p>
+<p class="p">L<sub class="ph sub">v</sub>              Maximum valve lift [m]</p>
+<p class="p">n<sub class="ph sub">v</sub>              No. of valves [-]</p>
+<p class="p">C<sub class="ph sub">vf</sub>             Flat cam follower constant   [Pa m]</p>
+<p class="p">C<sub class="ph sub">vr</sub>             Roller cam follower constant   [Pa m]</p>
+<p class="p">Both of the cam followers' constants depend on the valve train configuration.</p>
+<p class="p"><strong class="ph b">4. Auxiliary Losses</strong></p>
+<p class="p">The following equation can be used to calculate the FMEP due to the auxiliaries</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_539"><a name="formula_CRUISE_UsersGuide_539"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{aux} =\alpha +\beta N+\gamma N^{2} \] </span></div><span class="formulacap">(3)</span></div>
+<p class="p">The constants <span class="formula_span">\(\alpha\)</span>, <span class="formula_span">\(\beta\)</span> and   <span class="formula_span">\(\gamma \)</span>  are used to be 6.23 x10<sup class="ph sup">3</sup> Pa, 5.22 Pa/rpm, -1.79x10<sup class="ph sup">-4</sup> Pa/rpm<sup class="ph sup">2</sup>, respectively.</p>
+<p class="p"><strong class="ph b">B. Pumping Losses</strong></p>
+<p class="p">The correlation used by Bohic has been used. That is: </p>
+<p class="p"><div class="imagecenter formula_fig"><span class="formula_span">\[ Pmep=10^{5}\cfrac{Disp}{0.0025}\left( {0.0785+4.02 \cdot 10^{-5}{\,  }N^{2}+4.64 \cdot 10^{-8}{\, }IMEP+2.17 \cdot 10^{-10}{\,  }N \cdot IMEP} \right) \] </span></div></p>
+<p class="p">where: IMEP, Disp are the indicated mean effective pressure and engine displacement, respectively.</p>
+<p class="p"><strong class="ph b">III. ENGINE LOSSES: Modified PNH Model</strong></p>
+<p class="p">The rate at which the engine structure and lubricating oil warm-up influences friction losses over the cycle, because these depend on oil viscosity, which in turn depends upon temperature. The friction power losses drop sharply over the first 50 seconds of engine warm-up <a class="xref" href="#Shayler_Christian">[2]</a>, after which the rate of fall is greatly reduced. Such behavior indicates that friction level changes are likely to be influenced by the oil viscosity. </p>
+<p class="p">The effect of viscosity changes is taken into account by scaling the instantaneous friction loss in proportion to values for fully warmed up conditions by Shayler et al. <a class="xref" href="#Shayler_Christian">[2]</a>.</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_541"><a name="formula_CRUISE_UsersGuide_541"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ \cfrac{Fmep_{T_{oil} } }{Fmep_{T_{oil} =90^{\circ}C} }=\left(  {\cfrac{v_{T_{oil} } }{v_{T_{oil} =90^{\circ}C} }} \right)^{0.24} \] </span></div><span class="formulacap">(4)</span></div>
+<p class="p"><strong class="ph b">IV. ENGINE LOSSES: SLM Model</strong></p>
+<p class="p">Shayler Leong Murphy <a class="xref" href="#Shayler_Leong">[3]</a>, SLM, compiled and examined the model fits friction teardown data from motored engine tests on 4 cylinder diesel engines. The original purpose of the experimental work was to examine friction losses at low temperatures and low engine speeds in connection with studies of cold start behavior. At low, sub-zero temperature typically between -20 C and  -30 C, engine friction take causes a substantial increase in the time taken to complete the start-up process. The focus had been on capturing the characteristics of the experimental data for cold, low speed operating conditions. </p>
+<p class="p">The bulk of the experimental data was obtained through motoring tests carried out on engines enclosed within a compact cold cell. The test engine was motored by a DC motor with an inline torque transducer in the driveline connecting the DC motor and the test engine. Friction teardown was carried out on four engine designs.</p>
+<p class="p"><strong class="ph b">A. Mechanical Friction</strong></p>
+<p class="p"><strong class="ph b">1. Crankshaft</strong></p>
+<p class="p">Friction means effective pressure in the crankshaft group is calculated using the following equation:</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_542"><a name="formula_CRUISE_UsersGuide_542"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{crankshaft} =c_{cb} \left( {\cfrac{N^{0.6}{\, }D_{b}^{3} {\,  }L_{b} {\, }n_{b} }{B^{2}{\, }S{\, }n_{c} }} \right)\left(  {\cfrac{\mu }{\mu_{ref} }} \right)^{n}+c_{cs} \left( {\cfrac{D_{b}  }{B^{2}{\, }S{\, }n_{c} }} \right) \] </span></div><span class="formulacap">(5)</span></div>
+<p class="p">where:</p>
+<p class="p">C<sub class="ph sub">cb</sub>            Coefficient of the hydrodynamic losses in main bearings   [Pa/rpm m]</p>
+<p class="p">C<sub class="ph sub">cs</sub>            Coefficient of friction losses in main bearing seals   [Pa m<sup class="ph sup">2</sup>]</p>
+<p class="p">n                viscosity index   [-]</p>
+<p class="p"><span class="formula_span">\( \mu  \)</span>               Oil dynamic viscosity at the operating temperature   [Pa.s]</p>
+<p class="p"><span class="formula_span">\( \mu_{ref}  \)</span>          Oil dynamic viscosity at fully warm, reference condition   [Pa.s]</p>
+<p class="p"><strong class="ph b">2. Piston (Reciprocating) Group</strong></p>
+<p class="p">Means effective pressure due to the friction in the piston group is expressed as follows:</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_545"><a name="formula_CRUISE_UsersGuide_545"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{piston} =\left( {c_{pb} \left( {\cfrac{N^{0.6}{\, }D_{b}^{3}  {\, }L_{b} {\, }n_{b} }{B^{2}{\, }S{\, }n_{c} }}  \right)+C_{ps} \left( {\cfrac{V_{p}^{0.5} }{B}} \right)+C_{pr} \left(  {\cfrac{V_{p}^{0.5} }{B^{2}}} \right)} \right)\left( {\cfrac{\mu }{\mu_{ref}  }} \right)^{n} \] </span></div><span class="formulacap">(6)</span></div>
+<p class="p">where:</p>
+<p class="p">C<sub class="ph sub">pb</sub>           Coefficient for connecting rod bearing hydrodynamics)   [kPa /rpm<sup class="ph sup">0.6 </sup>mm]</p>
+<p class="p">C<sub class="ph sub">ps</sub>           Coefficient for skirt-cylinder wall hydrodynamics   [kPa mm<sup class="ph sup">0.5 </sup>s<sup class="ph sup">0.5</sup>]</p>
+<p class="p">C<sub class="ph sub">pr</sub>            Coefficient for piston ring-cylinder wall   [kPa mm<sup class="ph sup">1.5 </sup>s<sup class="ph sup">0.5</sup>]</p>
+<p class="p">n               viscosity index (=0.4)   [-]</p>
+<p class="p"><strong class="ph b">3. Valve Train</strong></p>
+<p class="p">Means effective pressure due to the friction in the piston group is expressed as follows:</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_547"><a name="formula_CRUISE_UsersGuide_547"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{valvetrain} =c_{vb} \left( {\cfrac{N^{0.6}{\, \, }n_{b}  }{B^{2}{\, }S{\, }n_{c} }} \right){\, }\left( {\cfrac{\mu  }{\mu_{ref} }} \right)^{n}+C_{vs} +C_{vh} \left( {\cfrac{L_{v}^{1.5}  {\, }N^{0.5}{\, }n_{v} }{B{\, }S{\, }n_{c} }}  \right){\, }\left( {\cfrac{\mu }{\mu_{ref} }} \right)^{n}+ \] </span></div><div class="imagecenter formula_fig"><span class="formula_span">\[ c_{vm} \left( {2+\cfrac{{10}}{{5}+\mu {N}}} \right){\,  }\cfrac{L_{v} n_{v} }{S{\, }n_{c} }+fmep_{cam/follower}  \] </span></div><span class="formulacap">(7)</span></div>
+<p class="p">Flat Cam Follower</p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_548"><a name="formula_CRUISE_UsersGuide_548"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{cam{\, }follower} =c_{vf} \left(  {{2}+\cfrac{{10}}{{5}+\mu N}} \right)\cfrac{{\, }n_{v}  }{S{\, }n_{c} } \] </span></div><span class="formulacap">(8)</span></div>
+<p class="p">Roller Cam Follower</p>
+<p class="p"><span class="formula_span">\( Fmep_{cam{\, }follower} =c_{vr} \left( {\dfrac{N{\, }n_{v}  }{S{\, }n_{c} }} \right) \)</span></p>
+<p class="p">where:</p>
+<p class="p">C<sub class="ph sub">vb</sub>              Coefficient for camshaft bearing hydrodynamic   [kPa mm<sup class="ph sup">3</sup>/rpm<sup class="ph sup">0.6</sup>]</p>
+<p class="p">C<sub class="ph sub">vh</sub>              Oscillating hydrodynamic lubrication constant   [Pa m<sup class="ph sup">0.5</sup>/rpm<sup class="ph sup">0.5</sup>]</p>
+<p class="p">C<sub class="ph sub">vm</sub>              Oscillating mixed lubrication constant   [Pa]</p>
+<p class="p">C<sub class="ph sub">vs</sub>               Boundary lubrication constant due to the camshaft bearing seals   [Pa]</p>
+<p class="p">C<sub class="ph sub">vf</sub>                Flat cam follower constant   [Pa m]</p>
+<p class="p">C<sub class="ph sub">vr </sub>              Roller cam follower constant   [Pa m]</p>
+<p class="p">n                  viscosity index (=0.7)   [-]</p>
+<p class="p"><strong class="ph b">4. Auxiliary Losses</strong></p>
+<div class="fig formula_holder" id="formula_CRUISE_UsersGuide_550"><a name="formula_CRUISE_UsersGuide_550"><!-- --></a><div class="imagecenter formula_fig"><span class="formula_span">\[ Fmep_{aux} =\alpha +\left( {\beta N+\gamma N^{2}} \right)\left( {\cfrac{\mu  }{\mu_{ref} }} \right)^{n} \] </span></div><span class="formulacap">(9)</span></div>
+<p class="p">For oil pump, the constants ,, &amp; viscosity index (n) are: 1.28 kPa, 7.9x10<sup class="ph sup">-3</sup> kPa mm<sup class="ph sup">3</sup>/rpm,-8.4x10<sup class="ph sup">-7</sup> kPa mm<sup class="ph sup">3</sup>/rpm<sup class="ph sup">2</sup>, 0.3 (viscosity index), respectively. For water pump ,, &amp; viscosity index (n) 0.13 kPa,  2x10<sup class="ph sup">-3</sup> kPa mm<sup class="ph sup">3</sup>/rpm,  3x10<sup class="ph sup">-7</sup> kPa mm<sup class="ph sup">3</sup>/rpm<sup class="ph sup">2</sup>, 0.7, respectively. They are: 1.72 kPa, 6.9x10<sup class="ph sup">-4</sup> kPa mm<sup class="ph sup">3</sup>/rpm, 1.2x10<sup class="ph sup">-7</sup> kPa mm<sup class="ph sup">3</sup>/rpm<sup class="ph sup">2</sup>, 0.5, respectively for the oil pump.</p>
+<p class="p"><strong class="ph b">5. Pumping Losses</strong></p>
+<p class="p">The model was developed for motored engines. Therefore, the pumping losses are zero.</p>
+<p class="p"><strong class="ph b">V. REFERENCES</strong></p>
+<p class="p" id="Patton"><a name="Patton"><!-- --></a>[1]   K. J. Patton, R. G. Nitschke and J. B. Heywood 'Development and evaluation of a friction             model for spark-ignition engines' SAE Paper No. 89-0836</p>
+<p class="p" id="Shayler_Christian"><a name="Shayler_Christian"><!-- --></a>[2]   P. J. Shayler, S. J. Christian, T. Ma, 'A model for the investigation of temperature heat flow           and friction characteristics during engine warm-up', SAE Paper 93-1153</p>
+<p class="p" id="Shayler_Leong"><a name="Shayler_Leong"><!-- --></a>[3]   P. J. Shayler, D. K. W. Leong and M. Murphy 'Friction teardown data from motored engine           tests on light duty automotive diesel engines at low temperatures and speeds' ASME                2003, Fall Technical Conference.</p>
+<p class="p" id="Bohac"><a name="Bohac"><!-- --></a>[4]   S. V. Bohac, D. M. Baker and D. N. Assanis 'A global model for steady state and transient              S. I. Engine Heat transfer studies', International Congress &amp; Exposition Detroit, Michigan           Feb 26-29, 1996, SAE 960073</p>
+</div>
+<div class="related-links"><div id="prev_next_links">
+<ul class="familylinks">
+<li class="li_prev"><div class="previouslink"> <a class="link" href="../topics/CRUISE_UsersGuide_Increase_by_Mean_Pressure_Factor.html">Increase by Mean Pressure Factor</a></div>
+</li><li class="li_parent"><div class="parentlink"><div class="upHolder_link"/> <a class="link" href="../topics/CRUISE_UsersGuide_Consumption_Models.html">Consumption Models</a></div>
+</li><li class="li_next"><div class="nextlink"> <a class="link" href="../topics/CRUISE_UsersGuide_Fuel_Consumption.html">Fuel Consumption</a></div>
+</li></ul>
+</div></div>
+</div></div></div></div></div></div></div><div id="tooltip_message"/><script type="text/javaScript" src="../search/nwSearchFnt.js">i=1;</script><script type="text/javaScript" src="../resources/key.js">i=1;</script></body><script type="text/javaScript" src="../resources/javascript.js">i=1;</script><script type="text/javascript" src="../resources/location.js">i=11;</script><script type="text/javascript" src="../resources/prod.js">i=11;</script><script type="text/javascript" src="../resources/jquery.js">i=11;</script><link type="image/vnd.microsoft.icon" href="../resources/avl.ico" rel="shortcut icon"/><script type="text/javaScript" src="../search/addition.js">i=1;</script><script type="text/javaScript" src="../resources/yahoo.js">i=1;</script><script type="text/javaScript" src="../resources/event.js">i=1;</script><script type="text/javaScript" src="../resources/toctree.js">i=1;</script><script type="text/javaScript">
+ hesh = String(window.location).split('#').pop();
+
+
+
+        
+if(window.top === window.self) {
+    //hesh = String(window.location).split('#').pop()
+   
+     window.location.replace("../index.html#"+window.location.pathname.split('/').pop()+'#'+hesh);
+}
+
+
+ var header_hidden = getCookie("is_AST_docu_header_hidden");
+  /*alert(header_hidden);
+ if (header_hidden == "true")
+    {
+        hideHeader()
+    }
+    
+    
+     $(function() {
+        $("#treeDiv1").load("toc.html", function() {
+        var hash = location.hash.slice(1);
+        var focus_id;
+        if(hash == '' )
+        {
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop()+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop() == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1]
+            }
+            });
+        }
+        if(hash.substr(0,7)!='toc_id_')
+        {   
+            //alert(hash+' '+hash.substr(0,7));
+            focus_id = '#'+hash;
+            $('#'+hash).attr('class','marked');
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop().split('#')[0]+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop().split('#')[0] == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1];
+                    
+            }
+            });
+        }
+        else
+        {
+            focus_id = '#'+hash+'_child';
+        }
+        $('#'+hash+'_child').attr("class","active toc_link");
+       
+        $('#toc_top_list_holder').children('li').each(function(i) { 
+             $(this).children('ul').each(function(i) { 
+            $(this).attr('class','');
+        });
+        }); 
+        var parents = Array()
+        getParents(hash, parents);
+        breadcrumb(parents);
+        next_prev_link(hash);
+        $('.topictitle1').text($('.active').text());
+
+       var end = new Date().getTime();
+      var time = end - start;
+function_alert('Execution time: ' + time);
+
+        $(focus_id).focus()
+
+});
+        
+    });*/
+    
+    topic_page_update(product);
+     
+if(navigator.appName.indexOf("Internet Explorer")!=-1){
+        if(hesh != 'first_topic')
+        window.top.location.hash = '---'+window.location.pathname;
+   }
+   else
+   {
+    $('#bookmark').show();
+   }
+    
+
+        
+    
+    
+     var otherWindow = window.parent.frames[0];
+     otherWindow.postMessage("CRUISE_UsersGuide_Advanced_Friction_Model.xml", "*");
+     if (window.addEventListener) {
+      window.addEventListener("message", function(event) {               
+               $('body').html(event.data);
+            }, false);}
+            else
+            {
+                window.attachEvent('onmessage', function(event) {               
+               $('body').html(event.data);
+            });
+               // alert('Not supported try FireFox');
+            }
+     
+     </script>
+</html>

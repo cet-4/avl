@@ -1,0 +1,291 @@
+ <!-- saved EEE from url=(0014)about:internet -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Cache-control" content="public"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="dSPACE"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_CMC_platforms.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Main_Specifications.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Desk_Area.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Calculation_Center.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_CMC_Calculation.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_CMC_platforms.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_CMC_FMU.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_CMC_ETAS.html"/>
+<meta name="prodname" content="CRUISE"/><script type="text/javaScript">
+      
+   
+      var product = "CRUISE";
+      
+     
+      
+  </script>
+<meta name="version" content="23"/>
+<meta name="version" content="boost"/>
+<meta name="DC.Creator" content="AVL AST"/>
+<meta name="copyright" content="v2014 2013" type="primary"/>
+<meta name="DC.Rights.Owner" content="v2014 2013" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic"/>
+<meta http-equiv="X-UA-Compatibl" content="IE=8"/><link type="text/css" rel="stylesheet" href="../css/screen.css"/><link type="text/css" rel="stylesheet" href="../css/local/tree.css"/><link rel="stylesheet" type="text/css" href="../resources/commonltr.css"/>
+<title>dSPACE</title>
+<meta name='generationDateTime' content='24/Jan/2016 20:55:12'/>
+<meta name='generationSVN' content='Revision: 12348.'/>
+<script type="text/x-mathjax-config">
+
+      
+
+
+
+
+
+  MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['\\(','\\)']] },
+     MMLorHTML: { prefer: { Firefox: "MML" } },
+    extensions: ["tex2jax.js","toMathML.js"],
+    jax: ["input/TeX","output/SVG"],
+    imageFont: null
+});
+
+MathJax.Hub.Queue(
+    function () {
+            addonclickEventOnFormulas();  
+      
+    }
+  );
+
+if (MathJax.Hub.Browser.isMSIE){
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "HTML-CSS";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "HTML-CSS"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_HTMLorMML.js"] });
+}
+else
+{
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/SVG"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "SVG";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "SVG"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_SVG.js"] });
+}
+  MathJax.Hub.Queue(["Rerender", MathJax.Hub]);
+        MathJax.Hub.Register.StartupHook("MathMenu Ready",function () {
+           MathJax.Menu.menu.items[0].hidden = true;     // show math as
+           MathJax.Menu.menu.items[1].hidden = true;     // division line
+           MathJax.Menu.menu.items[3].hidden = true;     // Language
+           MathJax.Menu.menu.items[6].hidden = true;     // MathJax Help
+           MathJax.Menu.menu.items[2].menu.items[2].hidden = true;     // division line
+           MathJax.Menu.menu.items[2].menu.items[3].hidden = true;     // renderer
+           var s1=MathJax.Menu.menu.items[2];
+           var q1=s1.menu.Find("Scale All Math ...");
+           q1.hidden=true;
+ });
+// CVS_MathJax_pruned_js = "@(#) $Revision: 1.1 $ $ASTFile: d3ce96421e6aa4643dc226a17e0c247fd54756ae $"
+  
+
+           </script><script type="text/javaScript" src="../../../../resources/MathJax/MathJax.js">i=1;</script></head>
+<script type="text/javaScript">var index=0;var start = new Date().getTime();</script><body class="topic_body"><div id="version_id">documentation_storage/head</div><div class="searchForm" id="topic_tools"><div id="top_blue_border"><img class="print_button" src="../resources/print.png" alt="Print current topic" onclick="printTopic();"/><img class="print_button" src="../resources/star.png" alt="Bookmark page" onclick="bookmarkMe(document.location);" id="bookmark" style="display:none;"/></div></div><div id="splitterContainer"><div id="leftPane" style="display:none;"><div class="toc_container"><div id="container"><div id="containerTop"><div id="main"><div id="content"><form name="mainForm" action="javscript:;"><div class="newsItem"><div id="treeDiv1" style="display:none"><div style="display:none"> </div></div><div id="current_relative" style="display:none;">../</div></div></form></div></div></div></div></div></div><div id="rightPane"><div id="rightSplitterContainer"><div id="rightBottomPane"><div><div class="main_body"><div class="topicContent">
+
+<div id="next_previous_links"> </div><ul class="roles"><li><a id="beginner" target="_top">Beginner</a> </li><li><a id="intermediate" target="_top">Intermediate</a> </li><li><a id="expert" target="_top">Expert</a> </li></ul><h1 class="title topictitle1">dSPACE</h1>
+<div class="body"><p class="p">For the dSpace CMC calculation a license is required.</p>
+<p class="p">dSPACE tools with GNU C Compiler are installed in addition to the Windows VisualC platform requirements for using dSPACE builder from CMC. The end product of the calculation is a library which can be linked with Cruise S-function in MATLAB/Simulink during the build process for dSPACE DS1006 RT system. The library is created in two steps: </p>
+<div class="p"><ol class="ol"><li class="li">CMC is called and CMC .c files of a current model are created. These files contain all the input data of a selected model.</li>
+<li class="li">CMC .c files are compiled with dSPACE compiler and linked with Cruise library for dSPACE that comes with CRUISE installation.</li>
+</ol>
+</div>
+<p class="p">If the default settings are not satisfactory, adjust the settings on the CMC page before starting to build a new dSPACE library of the current model.</p>
+<div class="p">It is possible to create CMC executable or library for Windows, Linux and dSpace platform. Depending on selected CMC-Mode options, the resulting output is &lt;model_name&gt;.exe, lib&lt;model_name&gt;.lib, &lt;model_name&gt;.dll (Windows) or &lt;model_name&gt;.exe, lib&lt;model_name&gt;.a, &lt;model_name&gt;.so (Linux). Output files will be located in the '&lt;project_path&gt;\inc\cmc\cmc_output' folder.
+Once created, CMC executable or library can be copied where needed and used in the same way Cruise Kernel would be used. Significant difference is that the calculation is limited to the model which was used to create CMC executable or library. The only way to alter certain specific input data is through xml files, but this is possible only if it was anticipated during the creation of the CMC executable or library.
+There are two main categories of CMC executables and libraries:
+<ul class="ul"><li class="li">without output;</li>
+<li class="li">with output;</li>
+</ul>
+</div>
+<p class="p">Without output version is very useful if CMC will be used on the real time platforms which don't have the usual input capabilities.
+With output version is useful when you want to give somebody to view the results of a certain model, and you don't want to enable viewing the model itself and/or changing of input data. 
+</p>
+<p class="p"><strong class="ph b">CMC exe:</strong></p>
+<p class="p">This file can be run on any PC, whether it has a Cruise installation or not, by double click. When exe is started, command prompt window is opened where user can monitor calculation progress. If the exe file was built using with output mode, output files are created. Files that are created are the ones that were selected before starting CMC of a selected model. Running exe will always have the same outcome (if no xml file is available). Model that is calculated will be a model that was opened in Cruise when CMC was started, and results will be the ones that Cruise would have calculated for this specific model.</p>
+<p class="p"><strong class="ph b">CMC lib:</strong></p>
+<p class="p">It has same usage capabilities as CMC.exe, but user has to provide a main program that will be linked with this library. Main program has to call appropriate functions from library in appropriate order to get a good results. This is mostly used in Matlab to link S-function with Cruise.</p>
+<p class="p"><strong class="ph b">CMC dll: </strong></p>
+<p class="p">Same capabilities as CMC lib, only this time, linking of main program (i.e. S-function) is done dynamically and not statically like with lib.
+</p>
+<p class="p">All the setting descriptions are Windows VisualC related. LoadLib option is off by default because only static link is supported by dSPACE. <strong class="ph b">CMC-Mode</strong> is set to <strong class="ph b">without output</strong> by default because no file manipulation functions are available on dSPACE. Three additional options are available: </p>
+<div class="p"><ul class="ul"><li class="li">Task</li>
+<li class="li">Folder</li>
+<li class="li">MATLAB</li>
+<li class="li">Online Parameter Access</li>
+</ul>
+</div>
+<p class="p">Task and Folder are necessary for running CRUISE from S-function, because only one task and one folder can be run when CRUISE is used externally. The MATLAB checkbox is used to create dummy model for dSPACE. When activated MATLAB is started and CreateModel function is executed. Online Parameter Access is used when there are parameters defined in the model. For more information refer to the CRUISE Interfaces.</p>
+
+<table cellpadding="1" cellspacing="0" summary="" class="table" pgwide="1" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. </span></caption><tbody class="tbody"><tr class="row"><td class="entry" valign="top"> </td>
+<td class="entry" valign="top">Description</td>
+</tr>
+<tr class="row"><td class="entry" valign="top">CMC mode with output</td>
+<td class="entry" valign="top">On default always deactivated</td>
+</tr>
+<tr class="row"><td class="entry" valign="top">Allow dynamic library loading</td>
+<td class="entry" valign="top">On default always deactivated. This option is useful when building a model for a platform which does not allow any input from a file system. In such a case, it is not possible to dynamically load any library. Since some model components load libraries dynamically, select this option and CMC will then stop the creation of a new executable if it detects dynamic loading. Then check the model and prepare it in a way that it does not load any dynamic libraries (dll). After repairing the model, restart CMC. This early detection will save time.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top">Run full calculation</td>
+<td class="entry" valign="top">This option also serves to save time. When selected, during the creation stage CMC will run a complete calculation of the model. This is useful to recheck the correctness of the model while creating a CMC executable or library. On the other hand, if the model is very big and calculation is long, leave this unchecked. In that case CMC will detect all input data, but will skip calculation.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top">Online parameter access</td>
+<td class="entry" valign="top">Export active Online parameters to MATLAB. These values can be edited later in MATLAB S-Function</td>
+</tr>
+<tr class="row"><td class="entry" valign="top">Open in MATLAB</td>
+<td class="entry" valign="top">Open MATLAB after CMC is done running</td>
+</tr>
+<tr class="row"><td class="entry" valign="top">Active task folder/task</td>
+<td class="entry" valign="top">Select active task that will be used in CMC compiler</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div class="related-links"><div id="prev_next_links">
+<ul class="familylinks">
+<li class="li_prev"><div class="previouslink"> <a class="link" href="../topics/CRUISE_UsersGuide_CMC_FMU.html">Functional Mock-Up Unit (32-bit and 64-bit)</a></div>
+</li><li class="li_parent"><div class="parentlink"><div class="upHolder_link"/> <a class="link" href="../topics/CRUISE_UsersGuide_CMC_platforms.html" title="This section gives more details on available CMC platforms/compilers.">CMC platforms</a></div>
+</li><li class="li_next"><div class="nextlink"> <a class="link" href="../topics/CRUISE_UsersGuide_CMC_ETAS.html">ETAS</a></div>
+</li></ul>
+</div></div>
+</div></div></div></div></div></div></div><div id="tooltip_message"/><script type="text/javaScript" src="../search/nwSearchFnt.js">i=1;</script><script type="text/javaScript" src="../resources/key.js">i=1;</script></body><script type="text/javaScript" src="../resources/javascript.js">i=1;</script><script type="text/javascript" src="../resources/location.js">i=11;</script><script type="text/javascript" src="../resources/prod.js">i=11;</script><script type="text/javascript" src="../resources/jquery.js">i=11;</script><link type="image/vnd.microsoft.icon" href="../resources/avl.ico" rel="shortcut icon"/><script type="text/javaScript" src="../search/addition.js">i=1;</script><script type="text/javaScript" src="../resources/yahoo.js">i=1;</script><script type="text/javaScript" src="../resources/event.js">i=1;</script><script type="text/javaScript" src="../resources/toctree.js">i=1;</script><script type="text/javaScript">
+ hesh = String(window.location).split('#').pop();
+
+
+
+        
+if(window.top === window.self) {
+    //hesh = String(window.location).split('#').pop()
+   
+     window.location.replace("../index.html#"+window.location.pathname.split('/').pop()+'#'+hesh);
+}
+
+
+ var header_hidden = getCookie("is_AST_docu_header_hidden");
+  /*alert(header_hidden);
+ if (header_hidden == "true")
+    {
+        hideHeader()
+    }
+    
+    
+     $(function() {
+        $("#treeDiv1").load("toc.html", function() {
+        var hash = location.hash.slice(1);
+        var focus_id;
+        if(hash == '' )
+        {
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop()+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop() == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1]
+            }
+            });
+        }
+        if(hash.substr(0,7)!='toc_id_')
+        {   
+            //alert(hash+' '+hash.substr(0,7));
+            focus_id = '#'+hash;
+            $('#'+hash).attr('class','marked');
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop().split('#')[0]+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop().split('#')[0] == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1];
+                    
+            }
+            });
+        }
+        else
+        {
+            focus_id = '#'+hash+'_child';
+        }
+        $('#'+hash+'_child').attr("class","active toc_link");
+       
+        $('#toc_top_list_holder').children('li').each(function(i) { 
+             $(this).children('ul').each(function(i) { 
+            $(this).attr('class','');
+        });
+        }); 
+        var parents = Array()
+        getParents(hash, parents);
+        breadcrumb(parents);
+        next_prev_link(hash);
+        $('.topictitle1').text($('.active').text());
+
+       var end = new Date().getTime();
+      var time = end - start;
+function_alert('Execution time: ' + time);
+
+        $(focus_id).focus()
+
+});
+        
+    });*/
+    
+    topic_page_update(product);
+     
+if(navigator.appName.indexOf("Internet Explorer")!=-1){
+        if(hesh != 'first_topic')
+        window.top.location.hash = '---'+window.location.pathname;
+   }
+   else
+   {
+    $('#bookmark').show();
+   }
+    
+
+        
+    
+    
+     var otherWindow = window.parent.frames[0];
+     otherWindow.postMessage("CRUISE_UsersGuide_CMC_dSPACE.xml", "*");
+     if (window.addEventListener) {
+      window.addEventListener("message", function(event) {               
+               $('body').html(event.data);
+            }, false);}
+            else
+            {
+                window.attachEvent('onmessage', function(event) {               
+               $('body').html(event.data);
+            });
+               // alert('Not supported try FireFox');
+            }
+     
+     </script>
+</html>

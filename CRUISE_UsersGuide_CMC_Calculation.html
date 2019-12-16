@@ -1,0 +1,274 @@
+ <!-- saved EEE from url=(0014)about:internet -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Cache-control" content="public"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="CMC Export"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Calculation_Center.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Main_Specifications.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Desk_Area.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Calculation_Center.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Batch_Calculation.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Calculate_Projects_on_Network_in_Temporary_Directory.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Using_CMC.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_CMC_platforms.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Porting_user_functions_for_cmc_targets.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_User_functions_on_dSPACE_platform.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_User_functions_on_ETAS.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_How_to_port_user_functions_on_INtime_platform.html"/>
+<meta name="prodname" content="CRUISE"/><script type="text/javaScript">
+      
+   
+      var product = "CRUISE";
+      
+     
+      
+  </script>
+<meta name="version" content="23"/>
+<meta name="version" content="boost"/>
+<meta name="DC.Creator" content="AVL AST"/>
+<meta name="copyright" content="v2014 2013" type="primary"/>
+<meta name="DC.Rights.Owner" content="v2014 2013" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic"/>
+<meta http-equiv="X-UA-Compatibl" content="IE=8"/><link type="text/css" rel="stylesheet" href="../css/screen.css"/><link type="text/css" rel="stylesheet" href="../css/local/tree.css"/><link rel="stylesheet" type="text/css" href="../resources/commonltr.css"/>
+<title>CMC Export</title>
+<meta name='generationDateTime' content='24/Jan/2016 20:55:12'/>
+<meta name='generationSVN' content='Revision: 12348.'/>
+<script type="text/x-mathjax-config">
+
+      
+
+
+
+
+
+  MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['\\(','\\)']] },
+     MMLorHTML: { prefer: { Firefox: "MML" } },
+    extensions: ["tex2jax.js","toMathML.js"],
+    jax: ["input/TeX","output/SVG"],
+    imageFont: null
+});
+
+MathJax.Hub.Queue(
+    function () {
+            addonclickEventOnFormulas();  
+      
+    }
+  );
+
+if (MathJax.Hub.Browser.isMSIE){
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "HTML-CSS";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "HTML-CSS"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_HTMLorMML.js"] });
+}
+else
+{
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/SVG"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "SVG";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "SVG"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_SVG.js"] });
+}
+  MathJax.Hub.Queue(["Rerender", MathJax.Hub]);
+        MathJax.Hub.Register.StartupHook("MathMenu Ready",function () {
+           MathJax.Menu.menu.items[0].hidden = true;     // show math as
+           MathJax.Menu.menu.items[1].hidden = true;     // division line
+           MathJax.Menu.menu.items[3].hidden = true;     // Language
+           MathJax.Menu.menu.items[6].hidden = true;     // MathJax Help
+           MathJax.Menu.menu.items[2].menu.items[2].hidden = true;     // division line
+           MathJax.Menu.menu.items[2].menu.items[3].hidden = true;     // renderer
+           var s1=MathJax.Menu.menu.items[2];
+           var q1=s1.menu.Find("Scale All Math ...");
+           q1.hidden=true;
+ });
+// CVS_MathJax_pruned_js = "@(#) $Revision: 1.1 $ $ASTFile: d3ce96421e6aa4643dc226a17e0c247fd54756ae $"
+  
+
+           </script><script type="text/javaScript" src="../../../../resources/MathJax/MathJax.js">i=1;</script></head>
+<script type="text/javaScript">var index=0;var start = new Date().getTime();</script><body class="topic_body"><div id="version_id">documentation_storage/head</div><div class="searchForm" id="topic_tools"><div id="top_blue_border"><img class="print_button" src="../resources/print.png" alt="Print current topic" onclick="printTopic();"/><img class="print_button" src="../resources/star.png" alt="Bookmark page" onclick="bookmarkMe(document.location);" id="bookmark" style="display:none;"/></div></div><div id="splitterContainer"><div id="leftPane" style="display:none;"><div class="toc_container"><div id="container"><div id="containerTop"><div id="main"><div id="content"><form name="mainForm" action="javscript:;"><div class="newsItem"><div id="treeDiv1" style="display:none"><div style="display:none"> </div></div><div id="current_relative" style="display:none;">../</div></div></form></div></div></div></div></div></div><div id="rightPane"><div id="rightSplitterContainer"><div id="rightBottomPane"><div><div class="main_body"><div class="topicContent">
+
+<div id="next_previous_links"> </div><ul class="roles"><li><a id="beginner" target="_top">Beginner</a> </li><li><a id="intermediate" target="_top">Intermediate</a> </li><li><a id="expert" target="_top">Expert</a> </li></ul><h1 class="title topictitle1">CMC Export</h1>
+<div class="body"><p class="p">The Common Model Compiler (CMC) feature packs model input data with  CRUISE Kernel into an executable or library. Such binaries, which can be standalone .exe, shared library .dll or static library can be used to simulate only the model from which it was created.</p>
+<p class="p" id="CMC_model_prep"><a name="CMC_model_prep"><!-- --></a>To prepare the model for CMC export add <strong class="ph b">CRUISE Interface</strong> component, or one of it's derivatives: ETAS, dSPACE, NI Veristand, OPAL_RT, to the model and define input and output databus channels. Databus channels are used for data exchange between CMC exported CRUISE model and the external application that uses produced .dll. Input channels are used for sending data to external application, and output channels on CRUISE Interface are used for passing data from external application to CRUISE model.</p>
+<div class="p"><div class="note note"><div class="notetitle">Note:</div> User should take care when specifying units on CRUISE Interface databus channels. Values that come at input channels will be converted to specified units before sending them to external application. Units specified (Interon output channels just denote in which units values are coming from external application.</div>
+</div>
+<p class="p">After the model is prepared for CMC, proceed to the   Calculation Center where new executables with built-in data will be created. After adjusting some settings, the CMC is started by clicking on <img class="image" src="../media/CRUISE_UsersGuide_image104.gif"/> - <strong class="ph b">Start calculation</strong>.</p>
+<div class="p">The CMC executable or library can be created for Windows and dSPACE platforms. Depending on the selected option, the resulting output is <pre class="pre codeblock">&lt;model_name&gt;.exe</pre>
+, <pre class="pre codeblock">&lt;model_name&gt;.lib</pre>
+, <pre class="pre codeblock">&lt;model_name&gt;.dll</pre>
+ (Windows). Output files will be located in the '<pre class="pre codeblock">&lt;project_path&gt;\inc\cmc\cmc_output</pre>
+' folder.</div>
+<p class="p">Once created, the CMC executable or library can be copied where needed and used in the same way as the CRUISE Kernel would be used. A significant difference is that the calculation is limited to the model which was used to create the CMC executable or library. </p>
+<p class="p">The only way to alter certain specific input data is through favorites xml files. It is important to create and save the xml file before starting to create the CMC executable or library. The appropriate license is required to change certain input data using xml files while running the CMC executable. </p>
+<div class="p">To run <pre class="pre codeblock">&lt;model_name&gt;.exe</pre>
+ with new data, place the xml file in the same directory. Also, if the model uses any additional dynamic library, it is important that it is placed in the same directory as the CMC executable/library or the current working directory.</div>
+<p class="p">There are two main categories of CMC executables and libraries:</p>
+<div class="p"><ol class="ol"><li class="li"><strong class="ph b">without output</strong><p class="p">This is useful if CMC will be used on the real time platforms which do not have the usual input/output capabilities.</p>
+</li>
+<li class="li"><strong class="ph b">with output</strong><p class="p">This is useful when allowing the results of a certain model to be viewed without viewing the model itself and/or changing input data. </p>
+</li>
+</ol>
+</div>
+</div>
+<div class="related-links">
+<ol class="olchildlinks">
+<li class="link olchildlink_hidden"><a href="../topics/CRUISE_UsersGuide_Using_CMC.html">Using CMC</a><br/>
+</li>
+<li class="link olchildlink_hidden"><a href="../topics/CRUISE_UsersGuide_CMC_platforms.html">CMC platforms</a><br/>
+This section gives more details on available CMC platforms/compilers.</li>
+<li class="link olchildlink_hidden"><a href="../topics/CRUISE_UsersGuide_Porting_user_functions_for_cmc_targets.html">Porting user functions for Real Time CMC targets</a><br/>
+User function defined in user defined components can be with some adjustments run on real time platforms. </li>
+<li class="link olchildlink_hidden"><a href="../topics/CRUISE_UsersGuide_User_functions_on_dSPACE_platform.html">How to port user functions on a dSPACE platform</a><br/>
+This topic describes how to prepare a static library for porting user functions on dSPACE platform.</li>
+<li class="link olchildlink_hidden"><a href="../topics/CRUISE_UsersGuide_User_functions_on_ETAS.html">How to port user functions on an ETAS platform</a><br/>
+ This topic describes how to prepare shared objects to port user functions on an ETAS platform.</li>
+<li class="link olchildlink_hidden"><a href="../topics/CRUISE_UsersGuide_How_to_port_user_functions_on_INtime_platform.html">How to port user functions on INtime platform</a><br/>
+This topic describes how to prepare shared libraries for porting user functions on INtime platform so it can be used on PUMA Open system.</li>
+</ol>
+<div id="prev_next_links">
+<ul class="familylinks">
+<li class="li_prev"><div class="previouslink"> <a class="link" href="../topics/CRUISE_UsersGuide_Batch_Calculation.html">Batch Calculation</a></div>
+</li><li class="li_parent"><div class="parentlink"><div class="upHolder_link"/> <a class="link" href="../topics/CRUISE_UsersGuide_Calculation_Center.html">Calculation Center</a></div>
+</li><li class="li_next"><div class="nextlink"> <a class="link" href="../topics/CRUISE_UsersGuide_Calculate_Projects_on_Network_in_Temporary_Directory.html">Calculate Projects on Network in Temporary Directory</a></div>
+</li></ul>
+</div></div>
+</div></div></div></div></div></div></div><div id="tooltip_message"/><script type="text/javaScript" src="../search/nwSearchFnt.js">i=1;</script><script type="text/javaScript" src="../resources/key.js">i=1;</script></body><script type="text/javaScript" src="../resources/javascript.js">i=1;</script><script type="text/javascript" src="../resources/location.js">i=11;</script><script type="text/javascript" src="../resources/prod.js">i=11;</script><script type="text/javascript" src="../resources/jquery.js">i=11;</script><link type="image/vnd.microsoft.icon" href="../resources/avl.ico" rel="shortcut icon"/><script type="text/javaScript" src="../search/addition.js">i=1;</script><script type="text/javaScript" src="../resources/yahoo.js">i=1;</script><script type="text/javaScript" src="../resources/event.js">i=1;</script><script type="text/javaScript" src="../resources/toctree.js">i=1;</script><script type="text/javaScript">
+ hesh = String(window.location).split('#').pop();
+
+
+
+        
+if(window.top === window.self) {
+    //hesh = String(window.location).split('#').pop()
+   
+     window.location.replace("../index.html#"+window.location.pathname.split('/').pop()+'#'+hesh);
+}
+
+
+ var header_hidden = getCookie("is_AST_docu_header_hidden");
+  /*alert(header_hidden);
+ if (header_hidden == "true")
+    {
+        hideHeader()
+    }
+    
+    
+     $(function() {
+        $("#treeDiv1").load("toc.html", function() {
+        var hash = location.hash.slice(1);
+        var focus_id;
+        if(hash == '' )
+        {
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop()+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop() == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1]
+            }
+            });
+        }
+        if(hash.substr(0,7)!='toc_id_')
+        {   
+            //alert(hash+' '+hash.substr(0,7));
+            focus_id = '#'+hash;
+            $('#'+hash).attr('class','marked');
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop().split('#')[0]+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop().split('#')[0] == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1];
+                    
+            }
+            });
+        }
+        else
+        {
+            focus_id = '#'+hash+'_child';
+        }
+        $('#'+hash+'_child').attr("class","active toc_link");
+       
+        $('#toc_top_list_holder').children('li').each(function(i) { 
+             $(this).children('ul').each(function(i) { 
+            $(this).attr('class','');
+        });
+        }); 
+        var parents = Array()
+        getParents(hash, parents);
+        breadcrumb(parents);
+        next_prev_link(hash);
+        $('.topictitle1').text($('.active').text());
+
+       var end = new Date().getTime();
+      var time = end - start;
+function_alert('Execution time: ' + time);
+
+        $(focus_id).focus()
+
+});
+        
+    });*/
+    
+    topic_page_update(product);
+     
+if(navigator.appName.indexOf("Internet Explorer")!=-1){
+        if(hesh != 'first_topic')
+        window.top.location.hash = '---'+window.location.pathname;
+   }
+   else
+   {
+    $('#bookmark').show();
+   }
+    
+
+        
+    
+    
+     var otherWindow = window.parent.frames[0];
+     otherWindow.postMessage("CRUISE_UsersGuide_CMC_Calculation.xml", "*");
+     if (window.addEventListener) {
+      window.addEventListener("message", function(event) {               
+               $('body').html(event.data);
+            }, false);}
+            else
+            {
+                window.attachEvent('onmessage', function(event) {               
+               $('body').html(event.data);
+            });
+               // alert('Not supported try FireFox');
+            }
+     
+     </script>
+</html>

@@ -1,0 +1,677 @@
+ <!-- saved EEE from url=(0014)about:internet -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Cache-control" content="public"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Channel Numbers"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Creating_Report_Sheets.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Post-Processing.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Creating_Report_Sheets.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Text_Report.html"/>
+<meta name="DC.Relation" scheme="URI" content="../topics/CRUISE_UsersGuide_Channel_Wizard.html"/>
+<meta name="prodname" content="CRUISE"/><script type="text/javaScript">
+      
+   
+      var product = "CRUISE";
+      
+     
+      
+  </script>
+<meta name="version" content="23"/>
+<meta name="version" content="boost"/>
+<meta name="DC.Creator" content="AVL AST"/>
+<meta name="copyright" content="v2014 2013" type="primary"/>
+<meta name="DC.Rights.Owner" content="v2014 2013" type="primary"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic"/>
+<meta http-equiv="X-UA-Compatibl" content="IE=8"/><link type="text/css" rel="stylesheet" href="../css/screen.css"/><link type="text/css" rel="stylesheet" href="../css/local/tree.css"/><link rel="stylesheet" type="text/css" href="../resources/commonltr.css"/>
+<title>Channel Numbers</title>
+<meta name='generationDateTime' content='24/Jan/2016 20:55:12'/>
+<meta name='generationSVN' content='Revision: 12348.'/>
+<script type="text/x-mathjax-config">
+
+      
+
+
+
+
+
+  MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['\\(','\\)']] },
+     MMLorHTML: { prefer: { Firefox: "MML" } },
+    extensions: ["tex2jax.js","toMathML.js"],
+    jax: ["input/TeX","output/SVG"],
+    imageFont: null
+});
+
+MathJax.Hub.Queue(
+    function () {
+            addonclickEventOnFormulas();  
+      
+    }
+  );
+
+if (MathJax.Hub.Browser.isMSIE){
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "HTML-CSS";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "HTML-CSS"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_HTMLorMML.js"] });
+}
+else
+{
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/SVG"],
+  });
+  (function () {
+    cookie = MathJax.HTML.Cookie.Get("menu");
+    if (cookie.renderer) {
+      cookie.renderer = "SVG";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+    if (cookie.scale) {
+      cookie.scale = "100";
+      MathJax.HTML.Cookie.Set("menu",cookie);
+    }
+  })();
+  MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "SVG"]);
+  MathJax.Hub.Config({ config: ["TeX-AMS-MML_SVG.js"] });
+}
+  MathJax.Hub.Queue(["Rerender", MathJax.Hub]);
+        MathJax.Hub.Register.StartupHook("MathMenu Ready",function () {
+           MathJax.Menu.menu.items[0].hidden = true;     // show math as
+           MathJax.Menu.menu.items[1].hidden = true;     // division line
+           MathJax.Menu.menu.items[3].hidden = true;     // Language
+           MathJax.Menu.menu.items[6].hidden = true;     // MathJax Help
+           MathJax.Menu.menu.items[2].menu.items[2].hidden = true;     // division line
+           MathJax.Menu.menu.items[2].menu.items[3].hidden = true;     // renderer
+           var s1=MathJax.Menu.menu.items[2];
+           var q1=s1.menu.Find("Scale All Math ...");
+           q1.hidden=true;
+ });
+// CVS_MathJax_pruned_js = "@(#) $Revision: 1.1 $ $ASTFile: d3ce96421e6aa4643dc226a17e0c247fd54756ae $"
+  
+
+           </script><script type="text/javaScript" src="../../../../resources/MathJax/MathJax.js">i=1;</script></head>
+<script type="text/javaScript">var index=0;var start = new Date().getTime();</script><body class="topic_body"><div id="version_id">documentation_storage/head</div><div class="searchForm" id="topic_tools"><div id="top_blue_border"><img class="print_button" src="../resources/print.png" alt="Print current topic" onclick="printTopic();"/><img class="print_button" src="../resources/star.png" alt="Bookmark page" onclick="bookmarkMe(document.location);" id="bookmark" style="display:none;"/></div></div><div id="splitterContainer"><div id="leftPane" style="display:none;"><div class="toc_container"><div id="container"><div id="containerTop"><div id="main"><div id="content"><form name="mainForm" action="javscript:;"><div class="newsItem"><div id="treeDiv1" style="display:none"><div style="display:none"> </div></div><div id="current_relative" style="display:none;">../</div></div></form></div></div></div></div></div></div><div id="rightPane"><div id="rightSplitterContainer"><div id="rightBottomPane"><div><div class="main_body"><div class="topicContent">
+
+<div id="next_previous_links"> </div><ul class="roles"><li><a id="beginner" target="_top">Beginner</a> </li><li><a id="intermediate" target="_top">Intermediate</a> </li><li><a id="expert" target="_top">Expert</a> </li></ul><h1 class="title topictitle1">Channel Numbers</h1>
+<div class="body"><div class="p">The channel numbers are used in the template files to make a correlation to the input, respectively result data.  In its simplest form, a channel input will have the following format:  <pre class="pre codeblock"><strong class="ph b">#12345600@</strong></pre>
+</div>
+<p class="p">The Channel Wizard or the Data Handbook (also available in HTML format) are available to create or modify a template file and to find the numbers of certain channels. </p>
+<p class="p">Immediately in front of <strong class="ph b">@</strong>, other formatting options, which allow a special representation of the output values, can be stated.</p>
+<p class="p"><strong class="ph b">Description of the Formatting Options:</strong></p>
+<div class="p">
+<table cellpadding="1" cellspacing="0" summary="" class="table" pgwide="1" frame="border" border="1" rules="all"><tbody class="tbody"><tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p"><strong class="ph b">Symbol</strong></p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p"><strong class="ph b">Validity</strong></p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p"><strong class="ph b">Description</strong></p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p"><strong class="ph b">Default</strong></p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">#</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">always</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Each channel number has to start with this character.The position of the # Character states where the values are to be input in the output file.</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">L</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">single value1 column</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">The value is leftFlush.</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">rightFlush</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">F</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">single value1 column</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">The value is written in front of the value.</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Value is stated behind the value</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">%x.x</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">always</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">desired representation of the value places in front of the point .  places behind the point</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">integer 6.0</p>
+<p class="p">double 6.8</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">E</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">always</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Representation in exponential notation</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Floating point</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">[...]</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">floating point-single value or 1 column</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">The values are only converted into the new unit, and the new unit is stated as well.</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Value in Standard (SI) Unit</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">W</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">always</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Representation of the value without unit</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Unit is stated</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">x..</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Table</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Representation of a line of a Table</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Entire Table</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">y..</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Table</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Representation of a column of a Table</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Entire Table</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">x..y..</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Table</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Representation of a single value of a Table</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">Entire Table</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">#*1@</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">always</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">"Short Cut Number"</p>
+<p class="p">if there is not enough space to state the entire channel number, (incl.  formatting instruction), at the desired position.The corresponding channel number can be stated at any point in the template file if it has the appropriate syntax:</p>
+<p class="p">#12345600(1)%5.2f@</p>
+<p class="p">This additional channel number will be removed from the template file in the course of the program.</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">"..."</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">1 column</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Although the string is output as well, it has to be the last format instruction in front of the @ Character.  </p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">S</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">1 column</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">State the string in front of the value</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">The string is stated behind the value</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">s<em class="ph i">2</em></p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">1 column</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">State the string until the <em class="ph i">2</em><em class="ph i">nd</em> character in front of the value, the rest is stated behind the value</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">The string is stated behind the value</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">v1</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">single value</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">1 column is generated where the results of all variations are listed.</p>
+<p class="p">The number references to the type of variation:</p>
+<p class="p">v1 . . . Variation of the vehicle mass</p>
+<p class="p">v2 . . . Variation of the drag coefficient</p>
+<p class="p">v3 . . . Variation of the gear ratio coefficient</p>
+<p class="p">v4 . . . Variation of the engine displacement</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">I</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">single value</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">2 columns are generated where in the first column the sample number<sup class="ph sup">1</sup> is written and in the second one the sample results</p>
+</td>
+<td class="entry" valign="top" style="width:16%"> </td>
+</tr>
+<tr class="row"><td class="entry" valign="top" style="width:11%"><p class="p">@</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">always</p>
+</td>
+<td class="entry" valign="top" style="width:55%"><p class="p">Each channel number has to be finished with this character.</p>
+</td>
+<td class="entry" valign="top" style="width:16%"><p class="p">-</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p class="p"><sup class="ph sup">1</sup>  Sample number means the number, e.g.: of one wheel, in the vehicle.  With the sample              number a special wheel can be described and the results of one wheel can be shown.  </p>
+<p class="p"/>
+<p class="p">The formalization also allows the combination of several formatting instructions:</p>
+<p class="p">e.g.<strong class="ph b"> #1015000y14%4.2[ km/h ]fls"1st Gear"@</strong></p>
+<p class="p">The formatting instruction described above has the following results:</p>
+<p class="p">The result values of the 14<sup class="ph sup">th</sup> column (y14) of the transferred Table of values (Channel Number:  10150000) are to be represented with a floating point with 4 places in front of the point and 2 places behind the point (%4.2).</p>
+<p class="p">Furthermore, the values are to be converted from the SI value [m/s] to [km/h].</p>
+<p class="p">The unit is to be stated in front of the values (f), and the values are to be leftFlush (l).  (leftFlush will automatically replace the statement of the places in front of the point)</p>
+<p class="p">The additional text ("1st Gear:") also is to be stated in front of the unit (s) in each line of the column in the output file.</p>
+<p class="p">The formatting instruction has to be finished with the @ Character.</p>
+<p class="p">The result would look as follows:</p>
+<div class="p"><pre class="pre codeblock">1st Gear:  [km/h]  17.45</pre>
+</div>
+<div class="p"><pre class="pre codeblock">1st Gear:  [km/h]  21.33</pre>
+</div>
+<div class="p"><pre class="pre codeblock">1st Gear:  [km/h]  26.89</pre>
+</div>
+<div class="p"><pre class="pre codeblock">...</pre>
+</div>
+<div class="p"><ul class="ul"><li class="li"><strong class="ph b">Sample Results</strong><p class="p">The last two numbers of a channel number refer to the samples, i.e.  if there are four wheels in a model the corresponding channel has four samples.  If the channel number is defined with <strong class="ph b">#xxxxxx00@,</strong> all samples are printed out (one column), with <strong class="ph b">#xxxxxx01@</strong> one special sample result (1<sup class="ph sup">st</sup> sample) can be printed.</p>
+<p class="p">Example: (static rolling radius in the component wheel; equal for all four wheels)</p>
+<div class="p"><pre class="pre codeblock block">#114008<strong class="ph b">00</strong>w%5.3@                               0.255</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              0.255</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              0.255</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              0.255</pre>
+</div>
+<p class="p">respectively:</p>
+<div class="p"><pre class="pre codeblock block">#114008<strong class="ph b">01</strong>w%5.3@                               0.255</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="p"><ul class="ul"><li class="li"><strong class="ph b">Diagrams with Sample Results</strong><p class="p">With the formatting instruction "<strong class="ph b">i</strong>" a list with two columns can be defined, which allows a diagram representation for different sample results by using the PPD- diagram generator.  In the first column the sample number is located, in the second one the corresponding sample results.  </p>
+<p class="p">Example:</p>
+<div class="p"><pre class="pre codeblock block">#11400800iw%5.3@                        1          0.255</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                        2          0.255</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                        3          0.255</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                        4          0.255</pre>
+</div>
+</li>
+</ul>
+</div>
+<ul class="ul"><li class="li"><strong class="ph b">Variation Diagrams v</strong><strong class="ph b"><em class="ph i">x</em></strong><p class="p">With the formatting instruction "<strong class="ph b">v</strong><strong class="ph b"><em class="ph i">x</em></strong>" a list can be defined which contains all variation results.  Only results of the variation calculation are listed, the results of the standard calculation are not shown.  All variations are saved in a variation file.  </p>
+<p class="p">Example: (e.g.: 5 Variations of the vehicle mass  corresponding consumption results)</p>
+<div class="p"><pre class="pre codeblock block">#10150100v1w%5.1@#30150100vw%5.2[l/100km]@</pre>
+</div>
+<p class="p">leads to: </p>
+<div class="p"><pre class="pre codeblock block">1000.0                   8.42</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">1200.0                   9.54</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">1400.0                  10.32</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">1600.0                  11.55</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">1800.0                  12.47</pre>
+</div>
+</li>
+</ul>
+<ul class="ul"><li class="li"><strong class="ph b">Conditional Output</strong><p class="p">A block standing between the brackets  <strong class="ph b"><em class="ph i">^{</em></strong>  and  <strong class="ph b"><em class="ph i">^}</em></strong>  is not shown in the results file if no one of the channel numbers inside has a valid value.  The brackets can stand at the beginning of a line (like it is shown below) but they can also be located somewhere in the line.  </p>
+<div class="p"><pre class="pre codeblock block">#10150100vw%5.1@</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">^{</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">Optional Result:</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">#30150100@</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">#30150200@</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">^}</pre>
+</div>
+</li>
+</ul>
+<div class="p"><ul class="ul"><li class="li"><strong class="ph b">Definition of special Output files </strong><p class="p">A block marked with the brackets  "^["  and  "^]"  is not written into the file 'results.log' but into a special file. The brackets have to be stated always at the beginning of a new line. These lines are automatically deleted during the result output.</p>
+<p class="p">After the bracket  "^["  the name for the special file can be defined (marked with ""). If the filename is defined without extension automatically the extension  ".log"  is added. If no filename is defined the marked block is written in the file  "summary.log" .</p>
+<p class="p">Example: The file</p>
+<div class="p"><pre class="pre codeblock block">Mass:     #10150100%5.1@</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">^[</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">Mass:     #10150100%5.1w@</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">^]</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">Speed:    #10405500y1x1[1/min.]%5.1@</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">^["test.txt"</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">Mass:     #10150100%5.1@</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">^]</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">...</pre>
+</div>
+<p class="p">leads to the following outputs:</p>
+<p class="p">Results.log:</p>
+<div class="p"><pre class="pre codeblock block">Mass:      1000.0 &lt;kg&gt;</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">Speed:      600.0 &lt;1/min&gt;</pre>
+</div>
+<p class="p">summary.log:</p>
+<div class="p"><pre class="pre codeblock block">Mass:      1000.0</pre>
+</div>
+<p class="p">test.txt:</p>
+<div class="p"><pre class="pre codeblock block">Mass:      1000.0 &lt;kg&gt;</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="p"><ul class="ul"><li class="li"><strong class="ph b">String Output</strong><p class="p">s...... String stated in front of the value</p>
+<p class="p">s4.... String stated in front of the value until the 4<sup class="ph sup">th</sup> character, the rest is stated behind the value</p>
+<p class="p">Example:</p>
+<div class="p"><pre class="pre codeblock block">#10405500y1%5.1[1/min]s4"str1str2"@</pre>
+</div>
+<p class="p">leads to </p>
+<div class="p"><pre class="pre codeblock block">str1   600.0 &lt;1/min&gt;  str2</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">str1   800.0 &lt;1/min&gt;  str2</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">str1  1000.0 &lt;1/min&gt;  str2</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="p"><ul class="ul"><li class="li"><strong class="ph b">Coupling of Channels</strong><p class="p">Single Channels can be coupled by operators. </p>
+<p class="p">The coupling is made in the following way:</p>
+<div class="p"><pre class="pre codeblock block">#&lt;&lt;Channel1,Channel2,OP1,Channel3,OP2,Channel4,OP3,..&gt;&gt;Formatting Instructions@</pre>
+</div>
+<p class="p">The channels can be single values as well as single columns or lines of a table. It is also possible to define constant values instead of a channel; but the first argument has to be a channel. At the definition of the channels please check for the unit. Eventually a conversion into another unit is needed at the definition of the channels. During calculation, all channel values are transferred to basic units. For constant values, the basic unit of the previous channel (that means, of the previous argument) is used (not the eventually explicitly defined unit). </p>
+<p class="p">OPx represents the operator, where the following are available:</p>
+<div class="p"><pre class="pre codeblock none">ADD (2)</pre>
+..............for addition</div>
+<div class="p"><pre class="pre codeblock none">SUB (2)</pre>
+..............for subtraction</div>
+<div class="p"><pre class="pre codeblock none">MUL (2)</pre>
+..............for multiplication</div>
+<div class="p"><pre class="pre codeblock none">DIV (2)</pre>
+...............for division</div>
+<div class="p"><pre class="pre codeblock none">SEARCH_Y (3)</pre>
+....arguments: list 1, value, list 2. The result is the list of these values of list                            2, whose corresponding list 1-values are equal to the argument value.                               If there is no equation, the results are interpolated / extrapolated. </div>
+<p class="p">                          If a continuous series of values equals to the argument value, only the                               last value of this series is used. </p>
+<div class="p"><pre class="pre codeblock none">SEARCH_X (3)</pre>
+...arguments: list 1, value, list 2. The result is the list of indices of these                                 values, which would be the results of the SEARCH_Y-function (by using                               the same arguments)</div>
+<div class="p"><pre class="pre codeblock none">MAX (1)</pre>
+.............for the maximum of a list</div>
+<div class="p"><pre class="pre codeblock none">MIN (1)</pre>
+.............for the minimum of a list</div>
+<div class="p"><pre class="pre codeblock none">MAX_X (2)</pre>
+.........for the search for the value of the first list which corresponds to the first                             maximum of the second list</div>
+<div class="p"><pre class="pre codeblock none">MIN_X (2)</pre>
+..........for the search for the value of the first list which corresponds to the first                             minimum of the second list</div>
+<div class="p"><pre class="pre codeblock none">SIN (1)</pre>
+..............for the sinus values of a list</div>
+<div class="p"><pre class="pre codeblock none">COS (1)</pre>
+.............for the cosinus values of a list</div>
+<div class="p"><pre class="pre codeblock none">TAN (1)</pre>
+..............for the tangens values of a list</div>
+<div class="p"><pre class="pre codeblock none">ASIN (1)</pre>
+............for the arcsin values of a list</div>
+<div class="p"><pre class="pre codeblock none">ACOS (1)</pre>
+...........for the arccos values of a list</div>
+<div class="p"><pre class="pre codeblock none">ATAN (1)</pre>
+............for the arctan values of a list</div>
+<div class="p"><pre class="pre codeblock none">EXP (1)</pre>
+.............for the exponential values of a list</div>
+<div class="p"><pre class="pre codeblock none">LN (1)</pre>
+...............for the ln values of a list</div>
+<div class="p"><pre class="pre codeblock none">LOG (1)</pre>
+.............for the log values of a list</div>
+<div class="p"><pre class="pre codeblock none">POW (2)</pre>
+...........arguments: list, value. The results are the list values with the power of                               the value</div>
+<div class="p"><pre class="pre codeblock none">SQRT (1)</pre>
+...........for the square root values of a list</div>
+<div class="p"><pre class="pre codeblock none">ABS (1)</pre>
+.............for the absolute values of a list</div>
+<p class="p">Some examples of this:</p>
+<p class="p">For all examples the following channels are used:</p>
+<div class="p"><pre class="pre codeblock block">#10403200y1@             with the values      243.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              293.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              377.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              378.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              473.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">#10403200y2@             with the values        0.01</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              210.0</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                              210.0</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                             2100.0</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">                                             2100.0</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">#10403200y1x3@         with the value         377.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">#10403200y2x3@         with the value         210.0</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">#(1)&lt;&lt;#10403200y1@,#10403200y2@,OP&gt;&gt;%8.2w@</pre>
+</div>
+<p class="p">couples the columns #10403200y1@ and #10403200y2@. The single values of the columns are coupled with each other. The results can be stated with a "usual" Short-cut number (in this case #*1@). This calculation leads to the following results for the different operators:</p>
+<div class="p"><pre class="pre codeblock block">ADD               SUB               MUL                DIV</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 243.16         243.14              2.43            24315.00</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 503.15          83.15          61561.50                1.40</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 587.15         167.15          79201.50                1.80</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">2478.15       -1721.85         794115.00                0.18</pre>
+</div>
+<div class="p"><pre class="pre codeblock block">2573.15       -1626.85         993615.00                0.23</pre>
+</div>
+<p class="p">The number of values of the coupled columns must exactly be the same.</p>
+<p class="p">If one column is coupled to a constant value, the coupling is performed for the whole column. E.g. the definition </p>
+<div class="p"><pre class="pre codeblock block">#(3)&lt;&lt;#10403200y1@,2,OP&gt;&gt;%5.2w@</pre>
+</div>
+<p class="p">leads to the following results:</p>
+<div class="p"><pre class="pre codeblock block">   ADD            SUB                MUL            DIV</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 245.15         241.15             486.30          121.57</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 295.15         291.15             586.30          146.57</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 379.15         375.15             754.30          188.57</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 380.15         376.15             756.30          189.07</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 475.15         471.15             946.30          236.57</pre>
+</div>
+<p class="p">Lists of the length 1 are calculated like constant values.</p>
+<div class="p"><pre class="pre codeblock block">#(4)&lt;&lt;#10403200y1x3@,#10403200y2x3@,OP&gt;&gt;%5.2w@</pre>
+</div>
+<p class="p">couples the single values of both tables. This leads to the following results:</p>
+<div class="p"><pre class="pre codeblock block">   ADD           SUB                MUL             DIV</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 587.15        167.15            79201.50           1.80</pre>
+</div>
+<p class="p">Of course also a combination of more than one inputs is possible. E.g. the definition </p>
+<div class="p"><pre class="pre codeblock block">#(5)&lt;&lt;#10403200y1@,#10403200y2@,ADD,2,MUL,2,DIV,#10403200y2@,SUB&gt;&gt;%5.2w@</pre>
+</div>
+<p class="p">delivers as results the first column again</p>
+<div class="p"><pre class="pre codeblock block"> 243.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 293.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 377.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 378.15</pre>
+</div>
+<div class="p"><pre class="pre codeblock block"> 473.15</pre>
+</div>
+<p class="p">The unit of the output is not defined by default. If the unit should is also stated a question mark is stated instead of the unit.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="related-links"><div id="prev_next_links">
+<ul class="familylinks">
+<li class="li_prev"><div class="previouslink"> <a class="link" href="../topics/CRUISE_UsersGuide_Text_Report.html">Text Report</a></div>
+</li><li class="li_parent"><div class="parentlink"><div class="upHolder_link"/> <a class="link" href="../topics/CRUISE_UsersGuide_Creating_Report_Sheets.html">Creating Report Sheets</a></div>
+</li><li class="li_next"><div class="nextlink"> <a class="link" href="../topics/CRUISE_UsersGuide_Channel_Wizard.html">Channel Wizard</a></div>
+</li></ul>
+</div></div>
+</div></div></div></div></div></div></div><div id="tooltip_message"/><script type="text/javaScript" src="../search/nwSearchFnt.js">i=1;</script><script type="text/javaScript" src="../resources/key.js">i=1;</script></body><script type="text/javaScript" src="../resources/javascript.js">i=1;</script><script type="text/javascript" src="../resources/location.js">i=11;</script><script type="text/javascript" src="../resources/prod.js">i=11;</script><script type="text/javascript" src="../resources/jquery.js">i=11;</script><link type="image/vnd.microsoft.icon" href="../resources/avl.ico" rel="shortcut icon"/><script type="text/javaScript" src="../search/addition.js">i=1;</script><script type="text/javaScript" src="../resources/yahoo.js">i=1;</script><script type="text/javaScript" src="../resources/event.js">i=1;</script><script type="text/javaScript" src="../resources/toctree.js">i=1;</script><script type="text/javaScript">
+ hesh = String(window.location).split('#').pop();
+
+
+
+        
+if(window.top === window.self) {
+    //hesh = String(window.location).split('#').pop()
+   
+     window.location.replace("../index.html#"+window.location.pathname.split('/').pop()+'#'+hesh);
+}
+
+
+ var header_hidden = getCookie("is_AST_docu_header_hidden");
+  /*alert(header_hidden);
+ if (header_hidden == "true")
+    {
+        hideHeader()
+    }
+    
+    
+     $(function() {
+        $("#treeDiv1").load("toc.html", function() {
+        var hash = location.hash.slice(1);
+        var focus_id;
+        if(hash == '' )
+        {
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop()+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop() == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1]
+            }
+            });
+        }
+        if(hash.substr(0,7)!='toc_id_')
+        {   
+            //alert(hash+' '+hash.substr(0,7));
+            focus_id = '#'+hash;
+            $('#'+hash).attr('class','marked');
+            $('.toc_link').each(function(index) {
+            //alert($(location).attr('href').split('/').pop().split('#')[0]+' == '+$(this).attr('href').split('/').pop().split('#')[0]);
+            if($(location).attr('href').split('/').pop().split('#')[0] == $(this).attr('href').split('/').pop().split('#')[0])
+            {
+                    //alert($(this).attr('href'));
+                    hash = $(this).attr('href').split('/').pop().split('#')[1];
+                    
+            }
+            });
+        }
+        else
+        {
+            focus_id = '#'+hash+'_child';
+        }
+        $('#'+hash+'_child').attr("class","active toc_link");
+       
+        $('#toc_top_list_holder').children('li').each(function(i) { 
+             $(this).children('ul').each(function(i) { 
+            $(this).attr('class','');
+        });
+        }); 
+        var parents = Array()
+        getParents(hash, parents);
+        breadcrumb(parents);
+        next_prev_link(hash);
+        $('.topictitle1').text($('.active').text());
+
+       var end = new Date().getTime();
+      var time = end - start;
+function_alert('Execution time: ' + time);
+
+        $(focus_id).focus()
+
+});
+        
+    });*/
+    
+    topic_page_update(product);
+     
+if(navigator.appName.indexOf("Internet Explorer")!=-1){
+        if(hesh != 'first_topic')
+        window.top.location.hash = '---'+window.location.pathname;
+   }
+   else
+   {
+    $('#bookmark').show();
+   }
+    
+
+        
+    
+    
+     var otherWindow = window.parent.frames[0];
+     otherWindow.postMessage("CRUISE_UsersGuide_Channel_Numbers.xml", "*");
+     if (window.addEventListener) {
+      window.addEventListener("message", function(event) {               
+               $('body').html(event.data);
+            }, false);}
+            else
+            {
+                window.attachEvent('onmessage', function(event) {               
+               $('body').html(event.data);
+            });
+               // alert('Not supported try FireFox');
+            }
+     
+     </script>
+</html>
